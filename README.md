@@ -80,12 +80,10 @@
 - **[Python Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater)** — inline update hints for `requirements.txt` and `pyproject.toml`; one-click updates, with a confirmation before every major bump.<br>
   <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater"><img src="https://vsmarketplacebadges.dev/version/cookabc.python-dependencies-updater.svg" alt="marketplace version"></a>
   <img src="https://vsmarketplacebadges.dev/downloads-short/cookabc.python-dependencies-updater.svg" alt="installs">
-  <img src="https://vsmarketplacebadges.dev/rating-short/cookabc.python-dependencies-updater.svg" alt="rating">
 
 - **[npm Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater)** — the same treatment for `package.json`.<br>
   <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater"><img src="https://vsmarketplacebadges.dev/version/cookabc.npm-dependencies-updater.svg" alt="marketplace version"></a>
   <img src="https://vsmarketplacebadges.dev/downloads-short/cookabc.npm-dependencies-updater.svg" alt="installs">
-  <img src="https://vsmarketplacebadges.dev/rating-short/cookabc.npm-dependencies-updater.svg" alt="rating">
 
 <p align="center">
   <picture>
