@@ -47,9 +47,9 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://kachi-rho.vercel.app"><img src="https://raw.githubusercontent.com/cookabc/Kachi/main/docs/images/home.png" alt="Kachi hero: Hedge or Pledge — telling finance-English word pairs apart" width="100%"></a><br><br>
-      <b><a href="https://kachi-rho.vercel.app">Kachi</a></b> · <a href="https://github.com/cookabc/Kachi">repo</a> — a finance-English learning PWA: 40 word pairs told apart, 23 lessons, 208 quiz questions and a knowledge-graph view. Offline-capable, local-first, no account. React + Vite.<br><br>
-      <a href="https://kachi-rho.vercel.app"><img src="https://img.shields.io/badge/live-kachi--rho.vercel.app-1B2436?style=flat-square&logo=vercel&labelColor=0E1322" alt="live"></a>
+      <a href="https://kachi-game.vercel.app"><img src="https://raw.githubusercontent.com/cookabc/Kachi/main/docs/images/home.png" alt="Kachi hero: Hedge or Pledge — telling finance-English word pairs apart" width="100%"></a><br><br>
+      <b><a href="https://kachi-game.vercel.app">Kachi</a></b> · <a href="https://github.com/cookabc/Kachi">repo</a> — a finance-English learning PWA: 40 word pairs told apart, 23 lessons, 208 quiz questions and a knowledge-graph view. Offline-capable, local-first, no account. React + Vite.<br><br>
+      <a href="https://kachi-game.vercel.app"><img src="https://img.shields.io/badge/live-kachi--game.vercel.app-1B2436?style=flat-square&logo=vercel&labelColor=0E1322" alt="live"></a>
       <img src="https://img.shields.io/badge/PWA-offline--ready-1B2436?style=flat-square&labelColor=0E1322" alt="PWA, offline ready">
     </td>
     <td width="50%" valign="top">
