@@ -78,14 +78,14 @@
 </p>
 
 - **[Python Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater)** — inline update hints for `requirements.txt` and `pyproject.toml`; one-click updates, with a confirmation before every major bump.<br>
-  <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater"><img src="https://img.shields.io/visual-studio-marketplace/v/cookabc.python-dependencies-updater?style=flat-square&logo=visualstudiocode&label=vscode&labelColor=0E1322&color=1B2436" alt="marketplace version"></a>
-  <img src="https://img.shields.io/visual-studio-marketplace/d/cookabc.python-dependencies-updater?style=flat-square&label=installs&labelColor=0E1322&color=1B2436" alt="installs">
-  <img src="https://img.shields.io/visual-studio-marketplace/r/rating/cookabc.python-dependencies-updater?style=flat-square&label=rating&labelColor=0E1322&color=1B2436" alt="rating">
+  <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater"><img src="https://vsmarketplacebadges.dev/version/cookabc.python-dependencies-updater.svg" alt="marketplace version"></a>
+  <img src="https://vsmarketplacebadges.dev/downloads-short/cookabc.python-dependencies-updater.svg" alt="installs">
+  <img src="https://vsmarketplacebadges.dev/rating-short/cookabc.python-dependencies-updater.svg" alt="rating">
 
 - **[npm Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater)** — the same treatment for `package.json`.<br>
-  <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater"><img src="https://img.shields.io/visual-studio-marketplace/v/cookabc.npm-dependencies-updater?style=flat-square&logo=visualstudiocode&label=vscode&labelColor=0E1322&color=1B2436" alt="marketplace version"></a>
-  <img src="https://img.shields.io/visual-studio-marketplace/d/cookabc.npm-dependencies-updater?style=flat-square&label=installs&labelColor=0E1322&color=1B2436" alt="installs">
-  <img src="https://img.shields.io/visual-studio-marketplace/r/rating/cookabc.npm-dependencies-updater?style=flat-square&label=rating&labelColor=0E1322&color=1B2436" alt="rating">
+  <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater"><img src="https://vsmarketplacebadges.dev/version/cookabc.npm-dependencies-updater.svg" alt="marketplace version"></a>
+  <img src="https://vsmarketplacebadges.dev/downloads-short/cookabc.npm-dependencies-updater.svg" alt="installs">
+  <img src="https://vsmarketplacebadges.dev/rating-short/cookabc.npm-dependencies-updater.svg" alt="rating">
 
 <p align="center">
   <picture>
