@@ -44,6 +44,23 @@
   </picture>
 </p>
 
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://kachi-rho.vercel.app"><img src="https://raw.githubusercontent.com/cookabc/Kachi/main/docs/images/home.png" alt="Kachi hero: Hedge or Pledge — telling finance-English word pairs apart" width="100%"></a><br><br>
+      <b><a href="https://kachi-rho.vercel.app">Kachi</a></b> · <a href="https://github.com/cookabc/Kachi">repo</a> — a finance-English learning PWA: 40 word pairs told apart, 23 lessons, 208 quiz questions and a knowledge-graph view. Offline-capable, local-first, no account. React + Vite.<br><br>
+      <a href="https://kachi-rho.vercel.app"><img src="https://img.shields.io/badge/live-kachi--rho.vercel.app-1B2436?style=flat-square&logo=vercel&labelColor=0E1322" alt="live"></a>
+      <img src="https://img.shields.io/badge/PWA-offline--ready-1B2436?style=flat-square&labelColor=0E1322" alt="PWA, offline ready">
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://app-universe.vercel.app"><img src="assets/app-universe-home.png" alt="App Universe hero: discover tools that earn their place" width="100%"></a><br><br>
+      <b><a href="https://app-universe.vercel.app">App Universe</a></b> · <a href="https://github.com/cookabc/app-universe">repo</a> — a bilingual (EN/中文) curated directory of 30 design, gaming and productivity tools, each entry with a live preview and honest notes on when to use it. Next.js.<br><br>
+      <a href="https://app-universe.vercel.app"><img src="https://img.shields.io/badge/live-app--universe.vercel.app-1B2436?style=flat-square&logo=vercel&labelColor=0E1322" alt="live"></a>
+      <img src="https://img.shields.io/badge/Next.js-16-1B2436?style=flat-square&logo=nextdotjs&labelColor=0E1322" alt="Next.js">
+    </td>
+  </tr>
+</table>
+
 **[zcode-inspector](https://github.com/cookabc/zcode-inspector)** — 把 `~/.zcode` 摊开看清楚：每一类东西占多少、删了会怎样，然后决定清掉哪些。扫描只读 `stat`，从不读取文件内容。
 
 <p align="center">
