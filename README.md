@@ -1,36 +1,96 @@
-# Small, finished tools for the Mac and the editor.
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner-light.svg" width="900" alt="cookabc — small, finished tools for the Mac and the editor">
+  </picture>
+</p>
 
-Menu bar apps in Swift, VS Code extensions and web utilities in TypeScript —
-local-first, pixel-clean, MIT. I keep the scope small so the finish can be real.
+<p align="center">
+  <a href="https://github.com/cookabc?tab=followers"><img src="https://img.shields.io/github/followers/cookabc?label=followers&style=flat-square&color=2a3550&labelColor=0e1322&logo=github" alt="followers"></a>
+  &nbsp;
+  <img src="https://komarev.com/ghpvc/?username=cookabc&style=flat-square&color=35d0e0&labelColor=0e1322&label=views" alt="profile views">
+</p>
 
-## On the menu bar
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-menubar-dark.svg">
+    <img src="assets/hdr-menubar-light.svg" height="40" alt="On the menu bar">
+  </picture>
+</p>
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <a href="https://github.com/cookabc/vitals"><img src="https://raw.githubusercontent.com/cookabc/vitals/main/docs/images/overview.png" alt="Vitals pixel dashboard: CPU, GPU, memory, network, disk, battery and system on one dark panel" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/vitals">Vitals</a></b> — a system monitor that lives only in the menu bar. A live CPU mini-curve sits in the bar itself; a pixel dashboard behind it covers CPU, GPU, memory, network, disk, battery and processes. Swift 6, macOS 26+.
+      <b><a href="https://github.com/cookabc/vitals">Vitals</a></b> — a system monitor that lives only in the menu bar. A live CPU mini-curve sits in the bar itself; a pixel dashboard behind it covers CPU, GPU, memory, network, disk, battery and processes. Swift 6, macOS 26+.<br><br>
+      <a href="https://github.com/cookabc/vitals"><img src="https://img.shields.io/badge/macOS-26%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 26+"></a>
+      <img src="https://img.shields.io/badge/Swift-6-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6">
+      <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/cookabc/ai-toolbox"><img src="https://raw.githubusercontent.com/cookabc/ai-toolbox/main/docs/images/hero.png" alt="AI Toolbox hero: Codex and Claude Code usage and provider configuration in a pixel-styled menu bar panel" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/ai-toolbox">AI Toolbox</a></b> — local usage, trends and provider switching for Codex &amp; Claude Code, in a pixel-styled panel. Reads this Mac's own logs; never touches a remote bill or quota. Swift 6, zero SPM dependencies, macOS 13+.
+      <b><a href="https://github.com/cookabc/ai-toolbox">AI Toolbox</a></b> — local usage, trends and provider switching for Codex &amp; Claude Code, in a pixel-styled panel. Reads this Mac's own logs; never touches a remote bill or quota. Swift 6, zero SPM dependencies, macOS 13+.<br><br>
+      <a href="https://github.com/cookabc/ai-toolbox"><img src="https://img.shields.io/badge/macOS-13%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 13+"></a>
+      <img src="https://img.shields.io/badge/Swift-6%20·%20zero%20SPM%20deps-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6, zero SPM deps">
+      <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
     </td>
   </tr>
 </table>
 
-## In the browser
-
-**[zcode-inspector](https://github.com/cookabc/zcode-inspector)** — 把 `~/.zcode` 摊开看清楚：每一类东西占多少、删了会怎样，然后决定清掉哪些。扫描只读 `stat`，从不读取文件内容；零依赖，Node ≥ 22.5 即可跑。
-
 <p align="center">
-  <a href="https://github.com/cookabc/zcode-inspector"><img src="https://raw.githubusercontent.com/cookabc/zcode-inspector/main/docs/images/overview.png" alt="zcode-inspector overview: disk usage with a cleanup verdict for every category" width="500"></a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-browser-dark.svg">
+    <img src="assets/hdr-browser-light.svg" height="40" alt="In the browser">
+  </picture>
 </p>
 
-## In the editor
+**[zcode-inspector](https://github.com/cookabc/zcode-inspector)** — 把 `~/.zcode` 摊开看清楚：每一类东西占多少、删了会怎样，然后决定清掉哪些。扫描只读 `stat`，从不读取文件内容。
 
-- **[Python Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater)** — inline update hints for `requirements.txt` and `pyproject.toml`; one-click updates, with a confirmation before every major bump.
-- **[npm Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater)** — the same treatment for `package.json`.
+<p align="center">
+  <a href="https://github.com/cookabc/zcode-inspector"><img src="https://raw.githubusercontent.com/cookabc/zcode-inspector/main/docs/images/overview.png" alt="zcode-inspector overview: disk usage with a cleanup verdict for every category" width="500"></a><br>
+  <img src="https://img.shields.io/badge/Node-22.5%2B-1B2436?style=flat-square&logo=nodedotjs&labelColor=0E1322" alt="Node 22.5+">
+  <img src="https://img.shields.io/badge/dependencies-zero-1B2436?style=flat-square&labelColor=0E1322" alt="zero dependencies">
+  <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
+</p>
 
----
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-editor-dark.svg">
+    <img src="assets/hdr-editor-light.svg" height="40" alt="In the editor">
+  </picture>
+</p>
 
-`Swift` · `SwiftUI` · `TypeScript` · `Node.js` — the rest is private or still in the oven.
+- **[Python Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater)** — inline update hints for `requirements.txt` and `pyproject.toml`; one-click updates, with a confirmation before every major bump.<br>
+  <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater"><img src="https://img.shields.io/visual-studio-marketplace/v/cookabc.python-dependencies-updater?style=flat-square&logo=visualstudiocode&label=vscode&labelColor=0E1322&color=1B2436" alt="marketplace version"></a>
+  <img src="https://img.shields.io/visual-studio-marketplace/d/cookabc.python-dependencies-updater?style=flat-square&label=installs&labelColor=0E1322&color=1B2436" alt="installs">
+  <img src="https://img.shields.io/visual-studio-marketplace/r/rating/cookabc.python-dependencies-updater?style=flat-square&label=rating&labelColor=0E1322&color=1B2436" alt="rating">
+
+- **[npm Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater)** — the same treatment for `package.json`.<br>
+  <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater"><img src="https://img.shields.io/visual-studio-marketplace/v/cookabc.npm-dependencies-updater?style=flat-square&logo=visualstudiocode&label=vscode&labelColor=0E1322&color=1B2436" alt="marketplace version"></a>
+  <img src="https://img.shields.io/visual-studio-marketplace/d/cookabc.npm-dependencies-updater?style=flat-square&label=installs&labelColor=0E1322&color=1B2436" alt="installs">
+  <img src="https://img.shields.io/visual-studio-marketplace/r/rating/cookabc.npm-dependencies-updater?style=flat-square&label=rating&labelColor=0E1322&color=1B2436" alt="rating">
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-activity-dark.svg">
+    <img src="assets/hdr-activity-light.svg" height="40" alt="Stack and activity">
+  </picture>
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=swift,ts,nodejs,py,cs,rust,git,githubactions,vscode&perline=9" alt="Swift, TypeScript, Node.js, Python, C#, Rust, Git, GitHub Actions, VS Code">
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cookabc/cookabc/output/snake-dark.svg">
+    <img src="https://raw.githubusercontent.com/cookabc/cookabc/output/snake-light.svg" alt="contribution graph snake animation" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg">
+    <img src="assets/footer-light.svg" width="900" alt="the rest is private or still in the oven">
+  </picture>
+</p>
