@@ -76,25 +76,39 @@ MONO_W = 0.6  # advance of the monospace typing line, em ratio
 FS = 17.0
 
 
-def typing_anim(idx: int, n: int, width: float, t0: float) -> tuple[str, float]:
-    """SMIL width animation for phrase idx's clip rect: type, hold, delete."""
-    t_type_c, t_hold, t_del_c = 0.055, 1.25, 0.028
-    t_type, t_del = n * t_type_c, n * t_del_c
-    values, times = ["0"], ["0"]  # idle (width 0) until the phrase's window
+T_TYPE, T_HOLD, T_DEL = 0.055, 1.25, 0.028  # per-char type / hold / per-char delete
+
+
+def phrase_active(n: int) -> float:
+    return n * T_TYPE + T_HOLD + n * T_DEL
+
+
+def typing_anim(idx: int, n: int, width: float, t0: float, total: float) -> str:
+    """SMIL width animation for phrase idx's clip rect.
+
+    Every phrase shares the same `total` cycle so the loops stay in sync:
+    idle (width 0) -> type -> hold -> delete -> idle until the cycle ends.
+    """
     step = width / n
+    t_type_end, t_hold_end = t0 + n * T_TYPE, t0 + n * T_TYPE + T_HOLD
+    times, values = [], []
+    if t0 > 0:  # leading idle; a duplicated first keyTime would be invalid
+        times.append(0.0)
+        values.append("0")
+    times.append(t0)
+    values.append("0")
     for k in range(1, n + 1):
+        times.append(t0 + k * T_TYPE)
         values.append(f"{step * k:.1f}")
-        times.append(f"{t0 + k * t_type_c:.3f}")
+    times.append(t_hold_end)
     values.append(f"{width:.1f}")
-    times.append(f"{t0 + t_type + t_hold:.3f}")
     for k in range(n - 1, -1, -1):
+        times.append(t_hold_end + (n - k) * T_DEL)
         values.append(f"{step * k:.1f}")
-        times.append(f"{t0 + t_type + t_hold + (n - k) * t_del_c:.3f}")
-    total = t0 + t_type + t_hold + t_del
-    kt = ";".join(f"{t / total:.4f}" for t in map(float, times))
+    kt = ";".join(f"{min(t, total) / total:.4f}" for t in times)
     return (f'<animate attributeName="width" values="{";".join(values)}" '
             f'keyTimes="{kt}" calcMode="discrete" dur="{total:.2f}s" '
-            f'repeatCount="indefinite"/>'), total
+            f'repeatCount="indefinite"/>')
 
 
 def banner(p: dict, tag: str) -> None:
@@ -127,10 +141,13 @@ def banner(p: dict, tag: str) -> None:
             f'calcMode="discrete" dur="{1.8 + (i % 4) * 0.45}s" begin="{i * 0.5}s" '
             f'repeatCount="indefinite"/></rect>')
 
-    groups, t0 = [], 0.0
+    groups = []
     cw = FS * MONO_W
+    cycle = sum(phrase_active(len(ph)) for ph in PHRASES)
+    t0 = 0.0
     for i, ph in enumerate(PHRASES):
-        anim, t0 = typing_anim(i, len(ph), len(ph) * cw, t0)
+        anim = typing_anim(i, len(ph), len(ph) * cw, t0, cycle)
+        t0 += phrase_active(len(ph))
         groups.append(
             f'<g clip-path="url(#tp{i})">'
             f'<clipPath id="tp{i}"><rect x="92" y="168" width="0" height="26">{anim}</rect></clipPath>'
