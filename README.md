@@ -11,18 +11,6 @@
   <img src="https://komarev.com/ghpvc/?username=cookabc&style=flat-square&color=35d0e0&labelColor=0e1322&label=views" alt="profile views">
 </p>
 
-<table>
-  <tr>
-    <td>
-      <a href="https://github.com/cookabc/Framelet"><img src="https://raw.githubusercontent.com/cookabc/Framelet/main/docs/images/overview.png" alt="Framelet: choose a window or screen area, then preview and export recordings" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/Framelet">Framelet</a></b> — a native Mac recorder for windows and screen areas. Pause, resume, preview and export to MP4 or GIF. Picture only; all processing stays on this Mac.<br><br>
-      <img src="https://img.shields.io/badge/macOS-15%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 15+">
-      <img src="https://img.shields.io/badge/Swift-6%20·%20zero%20SPM%20deps-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6, zero SPM deps">
-      <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
-    </td>
-  </tr>
-</table>
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-menubar-dark.svg">
@@ -43,6 +31,18 @@
       <a href="https://github.com/cookabc/ai-toolbox"><img src="https://raw.githubusercontent.com/cookabc/ai-toolbox/main/docs/images/hero.png" alt="AI Toolbox hero: Codex and Claude Code usage and provider configuration in a pixel-styled menu bar panel" width="100%"></a><br><br>
       <b><a href="https://github.com/cookabc/ai-toolbox">AI Toolbox</a></b> — local usage, trends and provider switching for Codex &amp; Claude Code, in a pixel-styled panel. Reads this Mac's own logs; never touches a remote bill or quota. Swift 6, zero SPM dependencies, macOS 13+.<br><br>
       <a href="https://github.com/cookabc/ai-toolbox"><img src="https://img.shields.io/badge/macOS-13%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 13+"></a>
+      <img src="https://img.shields.io/badge/Swift-6%20·%20zero%20SPM%20deps-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6, zero SPM deps">
+      <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/cookabc/Framelet"><img src="https://raw.githubusercontent.com/cookabc/Framelet/main/docs/images/overview.png" alt="Framelet: choose a window or screen area, then preview and export recordings" width="100%"></a><br><br>
+      <b><a href="https://github.com/cookabc/Framelet">Framelet</a></b> — a native Mac recorder for windows and screen areas. Pause, resume, preview and export to MP4 or GIF. Picture only; all processing stays on this Mac.<br><br>
+      <img src="https://img.shields.io/badge/macOS-15%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 15+">
       <img src="https://img.shields.io/badge/Swift-6%20·%20zero%20SPM%20deps-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6, zero SPM deps">
       <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
     </td>
