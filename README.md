@@ -11,6 +11,18 @@
   <img src="https://komarev.com/ghpvc/?username=cookabc&style=flat-square&color=35d0e0&labelColor=0e1322&label=views" alt="profile views">
 </p>
 
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/cookabc/Framelet"><img src="https://raw.githubusercontent.com/cookabc/Framelet/main/docs/images/overview.png" alt="Framelet: choose a window or screen area, then preview and export recordings" width="100%"></a><br><br>
+      <b><a href="https://github.com/cookabc/Framelet">Framelet</a></b> — a native Mac recorder for windows and screen areas. Pause, resume, preview and export to MP4 or GIF. Picture only; all processing stays on this Mac.<br><br>
+      <img src="https://img.shields.io/badge/macOS-15%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 15+">
+      <img src="https://img.shields.io/badge/Swift-6%20·%20zero%20SPM%20deps-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6, zero SPM deps">
+      <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
+    </td>
+  </tr>
+</table>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-menubar-dark.svg">
@@ -48,7 +60,7 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://kachi-game.vercel.app"><img src="https://raw.githubusercontent.com/cookabc/Kachi/main/docs/images/home.png" alt="Kachi hero: Hedge or Pledge — telling finance-English word pairs apart" width="100%"></a><br><br>
-      <b><a href="https://kachi-game.vercel.app">Kachi</a></b> · <a href="https://github.com/cookabc/Kachi">repo</a> — a finance-English learning PWA: 40 word pairs told apart, 23 lessons, 208 quiz questions and a knowledge-graph view. Offline-capable, local-first, no account. React + Vite.<br><br>
+      <b><a href="https://kachi-game.vercel.app">Kachi</a></b> · <a href="https://github.com/cookabc/Kachi">repo</a> — a finance-English learning PWA: 40 finance concepts, 23 lessons, 208 quiz questions and a knowledge-graph view. Offline-capable, local-first, no account. React + Vite.<br><br>
       <a href="https://kachi-game.vercel.app"><img src="https://img.shields.io/badge/live-kachi--game.vercel.app-1B2436?style=flat-square&logo=vercel&labelColor=0E1322" alt="live"></a>
       <img src="https://img.shields.io/badge/PWA-offline--ready-1B2436?style=flat-square&labelColor=0E1322" alt="PWA, offline ready">
     </td>
