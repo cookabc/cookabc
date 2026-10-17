@@ -1,1 +1,10 @@
 preview.html
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store
