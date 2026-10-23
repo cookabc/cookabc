@@ -66,7 +66,7 @@
     </td>
     <td width="50%" valign="top">
       <a href="https://app-universe.vercel.app"><img src="assets/app-universe-home.png" alt="App Universe hero: discover tools that earn their place" width="100%"></a><br><br>
-      <b><a href="https://app-universe.vercel.app">App Universe</a></b>, <a href="https://github.com/cookabc/app-universe">repo</a> — a bilingual (EN/中文) curated directory of 30 design, gaming and productivity tools, each entry with a live preview and notes on when to use it.<br><br>
+      <b><a href="https://app-universe.vercel.app">App Universe</a></b>, <a href="https://github.com/cookabc/app-universe">repo</a> — a bilingual (EN/中文) curated directory of 31 design, gaming and productivity tools, each entry with a live preview and notes on when to use it.<br><br>
       <a href="https://app-universe.vercel.app"><img src="https://img.shields.io/badge/live-app--universe.vercel.app-113264?style=flat-square&logo=vercel&labelColor=1F2D5C" alt="live"></a>
       <img src="https://img.shields.io/badge/Next.js-16-113264?style=flat-square&logo=nextdotjs&labelColor=1F2D5C" alt="Next.js">
     </td>
