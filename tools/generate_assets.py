@@ -4,6 +4,12 @@
 All geometry is deterministic (fixed seed, no randomized hash ids), so
 re-running reproduces the same bytes. Font: Ark Pixel 12px proportional
 Latin, OFL (assets/ArkPixel-OFL.txt).
+
+The banner's right half used to be an abstract bar chart — a generic
+"analytics" motif that says nothing about the person. It is now a pixel
+desk: a menu bar with a live CPU sparkline, a terminal window whose
+prompt types itself, and a small stack of finished apps on a shelf.
+The point of the picture is to be *about* the work, not to decorate it.
 """
 import random
 from xml.sax.saxutils import escape
@@ -115,31 +121,102 @@ def banner(p: dict, tag: str) -> None:
     W, H, c = 900, 260, 14
     rand = random.Random(42)
 
-    bars = []
-    bx = 640.0
-    while bx < 838:
-        h0 = rand.randint(28, 138)
-        seq = [h0] + [rand.randint(28, 138) for _ in range(4)] + [h0]
-        dur = rand.choice([1.4, 1.7, 2.0, 2.3])
-        col = rand.choice([p["cyan"], p["teal"], p["violet"]])
-        kt = 'keyTimes="0;.2;.4;.6;.8;1" calcMode="discrete"'
-        anim = (f'<animate attributeName="height" values="{";".join(map(str, seq))}" {kt} '
-                f'dur="{dur}s" repeatCount="indefinite"/>'
-                f'<animate attributeName="y" values="{";".join(str(210 - h) for h in seq)}" {kt} '
-                f'dur="{dur}s" repeatCount="indefinite"/>')
-        bars.append(f'<rect x="{bx:.0f}" y="{210 - h0}" width="14" height="{h0}" fill="{col}">{anim}</rect>')
-        bars.append(f'<rect x="{bx:.0f}" y="210" width="14" height="3" fill="{p["border"]}"/>')
-        bx += 20
+    # ── The desk: a menu bar across the top, a terminal, and a shelf of
+    #    finished apps. Everything here is a thing the profile actually
+    #    ships, drawn in the same 4px grid as the wordmark.
+    #
+    #    The vertical budget is fixed — 260px tall, and the frame's inner
+    #    edge is at 246:
+    #       28 …  72   menu bar, with the live CPU curve
+    #       80 … 188   the terminal window
+    #      198 … 234   the shelf of finished apps
+    #      234        the shelf itself
+    desk = []
+
+    # Menu bar strip along the top of the right half.
+    desk.append(f'<rect x="596" y="28" width="290" height="44" fill="{p["border"]}" opacity="0.45"/>')
+
+    # A small app glyph in the menu bar — the Vitals status item.
+    desk.append(f'<rect x="604" y="40" width="8" height="8" fill="{p["teal"]}"/>')
+
+    # The live CPU sparkline: a curve of bars rising from a baseline, the
+    # way the Vitals menu bar item draws it. The bars are tall enough to
+    # read as a graph — a row of 5px stubs just looks like dashes.
+    pts = [7, 11, 9, 15, 12, 19, 14, 22, 16, 20, 13, 18, 16, 24, 18, 28, 20, 26, 17, 30]
+    step = 13
+    baseline = 68
+    spark = []
+    for i, v in enumerate(pts):
+        x = 622 + i * step
+        spark.append(
+            f'<rect x="{x}" y="{baseline - v}" width="9" height="{v}" fill="{p["cyan"]}" '
+            f'opacity="{0.4 + 0.6 * (i / (len(pts) - 1)):.2f}"/>'
+        )
+    desk.append(f'<g>{"".join(spark)}</g>')
+    desk.append(f'<rect x="620" y="{baseline}" width="268" height="2" fill="{p["border"]}"/>')
+
+    # The terminal window: a titled bar, a prompt, and a cursor.
+    tx, ty, tw, th = 604, 80, 268, 108
+    desk.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" fill="{p["bg"]}" stroke="{p["border"]}" stroke-width="2"/>')
+    desk.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="16" fill="{p["border"]}" opacity="0.6"/>')
+    for i, col in enumerate([p["cyan"], p["amber"], p["teal"]]):
+        desk.append(f'<rect x="{tx + 6 + i * 11}" y="{ty + 5}" width="6" height="6" fill="{col}"/>')
+    desk.append(
+        f'<path d="{text_path("terminal", 2.0, tx + 48, ty + 12)}" fill="{p["sub"]}" opacity="0.85"/>'
+    )
+    # Three prompt lines, typed on one after another.
+    lines = ["$ swift build", "$ pnpm test", "$ git push"]
+    for i, line in enumerate(lines):
+        x = tx + 10
+        y = ty + 36 + i * 22
+        col = [p["teal"], p["teal"], p["cyan"]][i]
+        desk.append(f'<path d="{text_path(line, 2.0, x, y)}" fill="{col}"/>')
+        cursor_w = meas(line, 2.0) + 4
+        desk.append(
+            f'<rect x="{x + cursor_w:.0f}" y="{y - 8}" width="7" height="10" fill="{p["amber"]}">'
+            f'<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.45;.5;.95;1" '
+            f'calcMode="discrete" dur="1.1s" begin="{0.3 * i:.1f}s" repeatCount="indefinite"/></rect>'
+        )
+
+    # The shelf: three finished apps as small windows on a stand.
+    shelf_y = 234
+    desk.append(f'<rect x="596" y="{shelf_y}" width="290" height="4" fill="{p["border"]}"/>')
+    apps = [
+        # (x, w, colour, window height, bars)
+        (606, 76, p["violet"], 36, 2),
+        (700, 80, p["teal"], 30, 2),
+        (798, 74, p["amber"], 36, 2),
+    ]
+    for i, (ax, aw, col, ah, rows) in enumerate(apps):
+        ay = shelf_y - ah
+        desk.append(
+            f'<rect x="{ax}" y="{ay}" width="{aw}" height="{ah}" fill="{p["bg"]}" '
+            f'stroke="{p["border"]}" stroke-width="2"/>'
+        )
+        desk.append(f'<rect x="{ax}" y="{ay}" width="{aw}" height="9" fill="{col}"/>')
+        # Inside: a couple of content lines that blink, as if it is live.
+        for r in range(rows):
+            ry = ay + 17 + r * 10
+            w = aw - 18 - (r * 6)
+            desk.append(
+                f'<rect x="{ax + 9}" y="{ry}" width="{w}" height="4" fill="{col}" opacity="0.55">'
+                f'<animate attributeName="opacity" values="0.25;0.25;0.7;0.7;0.25" '
+                f'keyTimes="0;.2;.4;.6;.8" calcMode="discrete" dur="{1.4 + i * 0.35:.2f}s" '
+                f'begin="{0.25 * i:.2f}s" repeatCount="indefinite"/></rect>'
+            )
+
+    # A tiny sleeping cat on the shelf, because the desk is a desk.
+    cx, cy = 884, shelf_y - 4
+    desk.append(f'<rect x="{cx - 9}" y="{cy - 15}" width="18" height="12" fill="{p["violet"]}" opacity="0.85"/>')
+    desk.append(f'<rect x="{cx - 9}" y="{cy - 19}" width="5" height="5" fill="{p["violet"]}" opacity="0.85"/>')
+    desk.append(f'<rect x="{cx + 4}" y="{cy - 19}" width="5" height="5" fill="{p["violet"]}" opacity="0.85"/>')
+    desk.append(
+        f'<rect x="{cx + 3}" y="{cy - 10}" width="2" height="2" fill="{p["bg"]}">'
+        f'<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.55;.6;.95;1" '
+        f'calcMode="discrete" dur="2.6s" repeatCount="indefinite"/></rect>'
+    )
 
     stars = []
-    for i, (sx, sy) in enumerate([(604, 36), (668, 22), (726, 50), (792, 28),
-                                  (852, 58), (630, 78), (700, 92), (824, 88)]):
-        col = [p["cyan"], p["amber"], p["violet"], p["teal"]][i % 4]
-        stars.append(
-            f'<rect x="{sx}" y="{sy}" width="5" height="5" fill="{col}" opacity="0">'
-            f'<animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.25;.5;.75;1" '
-            f'calcMode="discrete" dur="{1.8 + (i % 4) * 0.45}s" begin="{i * 0.5}s" '
-            f'repeatCount="indefinite"/></rect>')
 
     groups = []
     cw = FS * MONO_W
@@ -162,31 +239,77 @@ def banner(p: dict, tag: str) -> None:
 <defs><clipPath id="tw"><rect width="{W}" height="{H}"/></clipPath></defs>
 <path d="M {c},1 H {W - c} L {W - 1},{c} V {H - c} L {W - c},{H - 1} H {c} L 1,{H - c} V {c} Z"
       fill="{p["bg"]}" stroke="{p["border"]}" stroke-width="2"/>
-<g clip-path="url(#tw)">{''.join(stars)}</g>
+<g clip-path="url(#tw)">{"".join(stars)}</g>
 <path d="{word}" fill="{p["text"]}"/>
 <rect class="cur" x="{wend + 14:.0f}" y="68" width="16" height="64" fill="{p["cyan"]}"/>
 <rect x="56" y="168" width="12" height="22" fill="{p["cyan"]}">
   <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.49;.5;.99;1" calcMode="discrete" dur="1.1s" repeatCount="indefinite"/>
 </rect>
-{''.join(groups)}
-{''.join(bars)}
+{"".join(groups)}
+{"".join(desk)}
 </svg>'''
     with open(f"{OUT}/banner-{tag}.svg", "w") as f:
         f.write(svg)
 
 
 # ---------------------------------------------------------------- section headers
+# Each section gets an icon that says what the section is about, rather
+# than the same square for all four. The icon animates on its own clock.
 HEADERS = [
-    ("hdr-menubar", "ON THE MENU BAR"),
-    ("hdr-browser", "IN THE BROWSER"),
-    ("hdr-editor", "IN THE EDITOR"),
-    ("hdr-activity", "STACK & ACTIVITY"),
+    ("hdr-menubar", "ON THE MENU BAR", "menubar"),
+    ("hdr-browser", "IN THE BROWSER", "browser"),
+    ("hdr-editor", "IN THE EDITOR", "editor"),
+    ("hdr-activity", "STACK & ACTIVITY", "activity"),
 ]
 
 
-def header(p: dict, tag: str, name: str, text: str) -> None:
+def header_icon(p: dict, kind: str) -> str:
+    """A 16×16 pixel mark for the section, drawn on the same 4px grid."""
+    c = p["cyan"]
+    if kind == "menubar":
+        # A menu bar: a strip with one live status item.
+        return (
+            f'<rect x="7" y="18" width="18" height="14" fill="{p["text"]}" opacity="0.2"/>'
+            f'<rect x="7" y="18" width="18" height="4" fill="{p["text"]}" opacity="0.45"/>'
+            f'<rect x="9" y="20" width="5" height="1" fill="{c}"/>'
+            f'<rect x="19" y="24" width="4" height="6" fill="{c}"/>'
+            f'<rect x="19" y="24" width="4" height="6" fill="{c}" opacity="0.4">'
+            f'<animate attributeName="height" values="6;2;6;4;6" keyTimes="0;.25;.5;.75;1" '
+            f'calcMode="discrete" dur="2.2s" repeatCount="indefinite"/></rect>'
+        )
+    if kind == "browser":
+        # A browser window with a loading bar that fills and empties.
+        return (
+            f'<rect x="7" y="16" width="18" height="16" fill="{p["text"]}" opacity="0.2"/>'
+            f'<rect x="7" y="16" width="18" height="4" fill="{p["text"]}" opacity="0.45"/>'
+            f'<rect x="9" y="24" width="14" height="2" fill="{c}">'
+            f'<animate attributeName="width" values="2;14;2;14;2" keyTimes="0;.25;.5;.75;1" '
+            f'calcMode="discrete" dur="2.6s" repeatCount="indefinite"/></rect>'
+        )
+    if kind == "editor":
+        # A code caret that blinks.
+        return (
+            f'<rect x="7" y="16" width="18" height="16" fill="{p["text"]}" opacity="0.2"/>'
+            f'<path d="M13 20 L9 24 L13 28" fill="none" stroke="{c}" stroke-width="2"/>'
+            f'<path d="M19 20 L23 24 L19 28" fill="none" stroke="{c}" stroke-width="2"/>'
+            f'<rect x="15" y="22" width="2" height="5" fill="{c}">'
+            f'<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.45;.5;.95;1" '
+            f'calcMode="discrete" dur="1.1s" repeatCount="indefinite"/></rect>'
+        )
+    # activity: a stack of bars, like the commit graph.
+    return (
+        f'<rect x="7" y="16" width="18" height="16" fill="{p["text"]}" opacity="0.2"/>'
+        f'<rect x="9" y="25" width="4" height="5" fill="{c}"/>'
+        f'<rect x="14" y="21" width="4" height="9" fill="{c}"/>'
+        f'<rect x="19" y="18" width="4" height="12" fill="{c}">'
+        f'<animate attributeName="height" values="12;6;12;9;12" keyTimes="0;.25;.5;.75;1" '
+        f'calcMode="discrete" dur="1.8s" repeatCount="indefinite"/></rect>'
+    )
+
+
+def header(p: dict, tag: str, name: str, text: str, kind: str) -> None:
     S = 3.0
-    tx = 30
+    tx = 34
     w = tx + meas(text, S)
     W = int(w + 84)
     dots = "".join(
@@ -195,8 +318,7 @@ def header(p: dict, tag: str, name: str, text: str) -> None:
         f' calcMode="discrete" dur="1.8s" begin="{i * 0.3:.1f}s" repeatCount="indefinite"/></rect>'
         for i in range(5))
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="48" viewBox="0 0 {W} 48" role="img" aria-label="{escape(text.title())}">
-<rect x="10" y="19" width="16" height="16" fill="{p["cyan"]}"/>
-<rect x="7" y="16" width="16" height="16" fill="{p["text"]}" opacity="0.18"/>
+{header_icon(p, kind)}
 <path d="{text_path(text, S, tx, 37)}" fill="{p["text"]}"/>
 {dots}
 </svg>'''
@@ -228,7 +350,7 @@ def footer(p: dict, tag: str) -> None:
 if __name__ == "__main__":
     for p, tag in ((DARK, "dark"), (LIGHT, "light")):
         banner(p, tag)
-        for name, text in HEADERS:
-            header(p, tag, name, text)
+        for name, text, kind in HEADERS:
+            header(p, tag, name, text, kind)
         footer(p, tag)
     print("assets regenerated")
