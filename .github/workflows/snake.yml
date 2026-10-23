@@ -17,8 +17,8 @@ jobs:
         with:
           github_user_name: cookabc
           outputs: |
-            dist/snake-dark.svg?color_snake=%2335D0E0&color_dots=%231B2436,%231E5F63,%232AA79B,%2358C4A5,%239FE8D8
-            dist/snake-light.svg?color_snake=%230891B2&color_dots=%23E2E4EA,%239AD5C0,%234FB59B,%2322A085,%230E7666
+            dist/snake-dark.svg?color_snake=%234CCCE6&color_dots=%23082C36,%23045A6E,%23008396,%2300A2C7,%234CCCE6
+            dist/snake-light.svg?color_snake=%2300749E&color_dots=%23A9DAED,%2376BFD8,%234CA0C1,%23287F9E,%2300749E
       - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output

@@ -6,9 +6,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/cookabc?tab=followers"><img src="https://img.shields.io/github/followers/cookabc?label=followers&style=flat-square&color=2a3550&labelColor=0e1322&logo=github" alt="followers"></a>
+  <a href="https://github.com/cookabc?tab=followers"><img src="https://img.shields.io/github/followers/cookabc?label=followers&style=flat-square&color=0090ff&labelColor=1f2d5c&logo=github" alt="followers"></a>
   &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=cookabc&style=flat-square&color=35d0e0&labelColor=0e1322&label=views" alt="profile views">
+  <img src="https://komarev.com/ghpvc/?username=cookabc&style=flat-square&color=00a2c7&labelColor=1f2d5c&label=views" alt="profile views">
 </p>
 
 <p align="center">
@@ -22,17 +22,17 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://github.com/cookabc/vitals"><img src="https://raw.githubusercontent.com/cookabc/vitals/main/docs/images/overview.png" alt="Vitals pixel dashboard: CPU, GPU, memory, network, disk, battery and system on one dark panel" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/vitals">Vitals</a></b> — a system monitor that lives only in the menu bar. A live CPU mini-curve sits in the bar itself; a pixel dashboard behind it covers CPU, GPU, memory, network, disk, battery and processes. Swift 6, macOS 26+.<br><br>
-      <a href="https://github.com/cookabc/vitals"><img src="https://img.shields.io/badge/macOS-26%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 26+"></a>
-      <img src="https://img.shields.io/badge/Swift-6-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6">
-      <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
+      <b><a href="https://github.com/cookabc/vitals">Vitals</a></b> — a system monitor that lives only in the menu bar. A live CPU mini-curve sits in the bar itself; a pixel dashboard behind it covers CPU, GPU, memory, network, disk, battery and processes.<br><br>
+      <a href="https://github.com/cookabc/vitals"><img src="https://img.shields.io/badge/macOS-26%2B-113264?style=flat-square&logo=apple&labelColor=1F2D5C" alt="macOS 26+"></a>
+      <img src="https://img.shields.io/badge/Swift-6-113264?style=flat-square&logo=swift&labelColor=1F2D5C" alt="Swift 6">
+      <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/cookabc/ai-toolbox"><img src="https://raw.githubusercontent.com/cookabc/ai-toolbox/main/docs/images/hero.png" alt="AI Toolbox hero: Codex and Claude Code usage and provider configuration in a pixel-styled menu bar panel" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/ai-toolbox">AI Toolbox</a></b> — local usage, trends and provider switching for Codex &amp; Claude Code, in a pixel-styled panel. Reads this Mac's own logs; never touches a remote bill or quota. Swift 6, zero SPM dependencies, macOS 13+.<br><br>
-      <a href="https://github.com/cookabc/ai-toolbox"><img src="https://img.shields.io/badge/macOS-13%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 13+"></a>
-      <img src="https://img.shields.io/badge/Swift-6%20·%20zero%20SPM%20deps-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6, zero SPM deps">
-      <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
+      <b><a href="https://github.com/cookabc/ai-toolbox">AI Toolbox</a></b> — local usage, trends and provider switching for Codex &amp; Claude Code, in a pixel-styled panel. Reads this Mac's own logs.<br><br>
+      <a href="https://github.com/cookabc/ai-toolbox"><img src="https://img.shields.io/badge/macOS-13%2B-113264?style=flat-square&logo=apple&labelColor=1F2D5C" alt="macOS 13+"></a>
+      <img src="https://img.shields.io/badge/Swift-6%20%2C%20zero%20SPM%20deps-113264?style=flat-square&logo=swift&labelColor=1F2D5C" alt="Swift 6, zero SPM deps">
+      <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">
     </td>
   </tr>
 </table>
@@ -41,10 +41,10 @@
   <tr>
     <td>
       <a href="https://github.com/cookabc/Framelet"><img src="https://raw.githubusercontent.com/cookabc/Framelet/main/docs/images/overview.png" alt="Framelet: choose a window or screen area, then preview and export recordings" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/Framelet">Framelet</a></b> — a native Mac recorder for windows and screen areas. Pause, resume, preview and export to MP4 or GIF. Picture only; all processing stays on this Mac.<br><br>
-      <img src="https://img.shields.io/badge/macOS-15%2B-1B2436?style=flat-square&logo=apple&labelColor=0E1322" alt="macOS 15+">
-      <img src="https://img.shields.io/badge/Swift-6%20·%20zero%20SPM%20deps-1B2436?style=flat-square&logo=swift&labelColor=0E1322" alt="Swift 6, zero SPM deps">
-      <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
+      <b><a href="https://github.com/cookabc/Framelet">Framelet</a></b> — a native Mac recorder for windows and screen areas. Pause, resume, preview and export to MP4 or GIF.<br><br>
+      <img src="https://img.shields.io/badge/macOS-15%2B-113264?style=flat-square&logo=apple&labelColor=1F2D5C" alt="macOS 15+">
+      <img src="https://img.shields.io/badge/Swift-6%20%2C%20zero%20SPM%20deps-113264?style=flat-square&logo=swift&labelColor=1F2D5C" alt="Swift 6, zero SPM deps">
+      <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">
     </td>
   </tr>
 </table>
@@ -60,26 +60,26 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://kachi-game.vercel.app"><img src="https://raw.githubusercontent.com/cookabc/Kachi/main/docs/images/home.png" alt="Kachi hero: Hedge or Pledge — telling finance-English word pairs apart" width="100%"></a><br><br>
-      <b><a href="https://kachi-game.vercel.app">Kachi</a></b> · <a href="https://github.com/cookabc/Kachi">repo</a> — a finance-English learning PWA: 40 finance concepts, 23 lessons, 208 quiz questions and a knowledge-graph view. Offline-capable, local-first, no account. React + Vite.<br><br>
-      <a href="https://kachi-game.vercel.app"><img src="https://img.shields.io/badge/live-kachi--game.vercel.app-1B2436?style=flat-square&logo=vercel&labelColor=0E1322" alt="live"></a>
-      <img src="https://img.shields.io/badge/PWA-offline--ready-1B2436?style=flat-square&labelColor=0E1322" alt="PWA, offline ready">
+      <b><a href="https://kachi-game.vercel.app">Kachi</a></b>, <a href="https://github.com/cookabc/Kachi">repo</a> — a finance-English learning PWA: 40 finance concepts, 23 lessons, 208 quiz questions and a knowledge-graph view. Local-first, works offline, no account.<br><br>
+      <a href="https://kachi-game.vercel.app"><img src="https://img.shields.io/badge/live-kachi--game.vercel.app-113264?style=flat-square&logo=vercel&labelColor=1F2D5C" alt="live"></a>
+      <img src="https://img.shields.io/badge/PWA-offline--ready-113264?style=flat-square&labelColor=1F2D5C" alt="PWA, offline ready">
     </td>
     <td width="50%" valign="top">
       <a href="https://app-universe.vercel.app"><img src="assets/app-universe-home.png" alt="App Universe hero: discover tools that earn their place" width="100%"></a><br><br>
-      <b><a href="https://app-universe.vercel.app">App Universe</a></b> · <a href="https://github.com/cookabc/app-universe">repo</a> — a bilingual (EN/中文) curated directory of 30 design, gaming and productivity tools, each entry with a live preview and honest notes on when to use it. Next.js.<br><br>
-      <a href="https://app-universe.vercel.app"><img src="https://img.shields.io/badge/live-app--universe.vercel.app-1B2436?style=flat-square&logo=vercel&labelColor=0E1322" alt="live"></a>
-      <img src="https://img.shields.io/badge/Next.js-16-1B2436?style=flat-square&logo=nextdotjs&labelColor=0E1322" alt="Next.js">
+      <b><a href="https://app-universe.vercel.app">App Universe</a></b>, <a href="https://github.com/cookabc/app-universe">repo</a> — a bilingual (EN/中文) curated directory of 30 design, gaming and productivity tools, each entry with a live preview and notes on when to use it.<br><br>
+      <a href="https://app-universe.vercel.app"><img src="https://img.shields.io/badge/live-app--universe.vercel.app-113264?style=flat-square&logo=vercel&labelColor=1F2D5C" alt="live"></a>
+      <img src="https://img.shields.io/badge/Next.js-16-113264?style=flat-square&logo=nextdotjs&labelColor=1F2D5C" alt="Next.js">
     </td>
   </tr>
 </table>
 
-**[zcode-inspector](https://github.com/cookabc/zcode-inspector)** — 把 `~/.zcode` 摊开看清楚：每一类东西占多少、删了会怎样，然后决定清掉哪些。扫描只读 `stat`，从不读取文件内容。
+**[zcode-inspector](https://github.com/cookabc/zcode-inspector)** — 把 `~/.zcode` 摊开看清楚：每一类东西占多少、删了会怎样，然后决定清掉哪些。扫描只读 `stat`，不读文件内容。
 
 <p align="center">
   <a href="https://github.com/cookabc/zcode-inspector"><img src="https://raw.githubusercontent.com/cookabc/zcode-inspector/main/docs/images/overview.png" alt="zcode-inspector overview: disk usage with a cleanup verdict for every category" width="500"></a><br>
-  <img src="https://img.shields.io/badge/Node-22.5%2B-1B2436?style=flat-square&logo=nodedotjs&labelColor=0E1322" alt="Node 22.5+">
-  <img src="https://img.shields.io/badge/dependencies-zero-1B2436?style=flat-square&labelColor=0E1322" alt="zero dependencies">
-  <img src="https://img.shields.io/badge/license-MIT-1B2436?style=flat-square&labelColor=0E1322" alt="MIT">
+  <img src="https://img.shields.io/badge/Node-22.5%2B-113264?style=flat-square&logo=nodedotjs&labelColor=1F2D5C" alt="Node 22.5+">
+  <img src="https://img.shields.io/badge/dependencies-zero-113264?style=flat-square&labelColor=1F2D5C" alt="zero dependencies">
+  <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">
 </p>
 
 <p align="center">

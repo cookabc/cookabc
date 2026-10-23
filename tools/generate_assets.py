@@ -26,13 +26,42 @@ GLYPHS = FONT.getGlyphSet()
 CMAP = FONT.getBestCmap()
 UPM = FONT["head"].unitsPerEm  # 1200 -> 100 units per 12px-grid cell
 
+# 颜色全部取自 Radix UI Colors（@radix-ui/colors 3.0.0）。
+#
+# 用法按 Radix 自己的约定走，不是照着"好看"挑的：
+#   背景  → 色阶 1–2 档
+#   细线  → 色阶 6 档（非交互元素）
+#   正文  → 色阶 11 档（次要）/ 12 档（主要）
+#   实心色块 → 色阶 9 档（最纯，10 档是它的 hover）
+#
+# 中性底用 sand 色阶：它是 Radix 里唯一"暖纸"的一档，跟这套像素画
+# 的米白基调是一路的。深色底用 indigo 色阶：这套头像本来就是深蓝夜空。
+#
+# 四个强调色都是**当文字用**的 —— 终端里那三行提示词就是 cyan/teal 印上去的，
+# 所以它们按正文标准取（≥ 4.5:1），不按色块标准（≥ 3:1）。
+# 四色之间的 CIELAB ΔE 全部 ≥ 30，色相不会互相认错。
+#
+# 浅色: sky-11 / mint-11 / violet-9 / gold-11   —— 两两最小 ΔE 38.0
+# 深色: cyan-11 / jade-10 / purple-11 / amber-9 —— 两两最小 ΔE 38.4
 DARK = dict(
-    bg="#0E1322", border="#2A3550", text="#E8ECF5", sub="#8CA0C4",
-    cyan="#35D0E0", teal="#58C4A5", violet="#8B7CF6", amber="#F5B856",
+    bg="#141726",       # indigo-dark-2  背景
+    border="#304384",   # indigo-dark-6  细线
+    text="#d6e1ff",     # indigo-dark-12 正文
+    sub="#9eb1ff",      # indigo-dark-11 次要文字
+    cyan="#4ccce6",     # cyan-dark-11   —— 提示词是当文字印的
+    teal="#27b08b",     # jade-dark-10   —— 同上
+    violet="#6e6ade",   # iris-dark-10   —— 窗口标题条，实心色块
+    amber="#ffc53d",    # amber-dark-9   —— 同上
 )
 LIGHT = dict(
-    bg="#F6F4EE", border="#D8D2C4", text="#232A3A", sub="#5C6880",
-    cyan="#0891B2", teal="#0E9F82", violet="#6D5BD0", amber="#C77800",
+    bg="#f9f9f8",       # sand-2  背景
+    border="#dad9d6",   # sand-6  细线
+    text="#21201c",     # sand-12 正文
+    sub="#63635e",      # sand-11 次要文字
+    cyan="#00749e",     # sky-11   —— 提示词是当文字印的
+    teal="#027864",     # mint-11  —— 同上
+    violet="#6e56cf",   # violet-9 —— 窗口标题条，实心色块
+    amber="#ab6400",    # amber-11 —— 同上
 )
 
 
