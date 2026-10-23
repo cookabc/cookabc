@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "policy": "Original repository raster content preserved. No AI-generated raster assets added. This record documents source identity, not independent rights clearance.",
+  "rasterAssets": [
+    {
+      "path": "assets/app-universe-home.png",
+      "origin": "git:57b1570cf54384c8c79caa480f4b3fd05151db1b:assets/app-universe-home.png",
+      "sha256": "1633591a3695f298b020976d3dc4ca5074b9839ca00f20ce020b6f91ec5e962a",
+      "unchangedFromOrigin": true
+    }
+  ],
+  "remoteImages": [
+    "https://raw.githubusercontent.com/cookabc/Framelet/main/docs/images/overview.png",
+    "https://raw.githubusercontent.com/cookabc/ai-toolbox/main/docs/images/hero.png",
+    "https://raw.githubusercontent.com/cookabc/vitals/main/docs/images/overview.png"
+  ]
+}
