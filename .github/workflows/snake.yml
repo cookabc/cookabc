@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: Platane/snk/svg-only@v3
+      - uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
         with:
           github_user_name: cookabc
           outputs: |
             dist/snake-dark.svg?color_snake=%234CCCE6&color_dots=%23082C36,%23045A6E,%23008396,%2300A2C7,%234CCCE6
             dist/snake-light.svg?color_snake=%2300749E&color_dots=%23A9DAED,%2376BFD8,%234CA0C1,%23287F9E,%2300749E
-      - uses: crazy-max/ghaction-github-pages@v4
+      - uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
         with:
           target_branch: output
           build_dir: dist
