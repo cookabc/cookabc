@@ -73,10 +73,17 @@
   </tr>
 </table>
 
-**[zcode-inspector](https://github.com/cookabc/zcode-inspector)** — 把 `~/.zcode` 摊开看清楚：每一类东西占多少、删了会怎样，然后决定清掉哪些。扫描只读 `stat`，不读文件内容。
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-machine-dark.svg">
+    <img src="assets/hdr-machine-light.svg" height="40" alt="On this machine">
+  </picture>
+</p>
+
+**[Agent Inspector](https://github.com/cookabc/zcode-inspector)** — local disk usage and session history for ZCode, Codex, Claude Code, Cursor, and DeepSeek Harness. It shows what deleting a category would remove, then lets you choose. The file inventory is metadata from `stat` (Codex classification also reads the first line of a rollout). A separate read-only security audit reads session text for leaked credentials and has no delete action. The page listens on `127.0.0.1` only.
 
 <p align="center">
-  <a href="https://github.com/cookabc/zcode-inspector"><img src="https://raw.githubusercontent.com/cookabc/zcode-inspector/main/docs/images/overview.png" alt="zcode-inspector overview: disk usage with a cleanup verdict for every category" width="500"></a><br>
+  <a href="https://github.com/cookabc/zcode-inspector"><img src="https://raw.githubusercontent.com/cookabc/zcode-inspector/main/docs/images/overview.png" alt="Agent Inspector overview: disk usage with a cleanup verdict for every category" width="500"></a><br>
   <img src="https://img.shields.io/badge/Node-22.5%2B-113264?style=flat-square&logo=nodedotjs&labelColor=1F2D5C" alt="Node 22.5+">
   <img src="https://img.shields.io/badge/dependencies-zero-113264?style=flat-square&labelColor=1F2D5C" alt="zero dependencies">
   <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">

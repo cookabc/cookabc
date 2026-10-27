@@ -12,14 +12,17 @@ prompt types itself, and a small stack of finished apps on a shelf.
 The point of the picture is to be *about* the work, not to decorate it.
 """
 import random
+import sys
+from pathlib import Path
 from xml.sax.saxutils import escape
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.misc.transform import Transform
 
-FONT_PATH = "assets/ark-pixel-12px-proportional-latin.woff2"
-OUT = "assets"
+ROOT = Path(__file__).resolve().parents[1]
+FONT_PATH = ROOT / "assets" / "ark-pixel-12px-proportional-latin.woff2"
+OUT = ROOT / "assets"
 
 FONT = TTFont(FONT_PATH)
 GLYPHS = FONT.getGlyphSet()
@@ -37,31 +40,31 @@ UPM = FONT["head"].unitsPerEm  # 1200 -> 100 units per 12px-grid cell
 # 中性底用 sand 色阶：它是 Radix 里唯一"暖纸"的一档，跟这套像素画
 # 的米白基调是一路的。深色底用 indigo 色阶：这套头像本来就是深蓝夜空。
 #
-# 四个强调色都是**当文字用**的 —— 终端里那三行提示词就是 cyan/teal 印上去的，
-# 所以它们按正文标准取（≥ 4.5:1），不按色块标准（≥ 3:1）。
-# 四色之间的 CIELAB ΔE 全部 ≥ 30，色相不会互相认错。
+# cyan / teal 印终端提示词，按正文标准（≥ 4.5:1）。
+# violet / amber 只做窗口标题条和光标，按色块标准（≥ 3:1）。
+# 浅色 amber-11 叠在 sand-2 上大约 4.4:1，不够当小字。
 #
-# 浅色: sky-11 / mint-11 / violet-9 / gold-11   —— 两两最小 ΔE 38.0
-# 深色: cyan-11 / jade-10 / purple-11 / amber-9 —— 两两最小 ΔE 38.4
+# 浅色: sky-11 / mint-11 / violet-9 / amber-11
+# 深色: cyan-11 / jade-10 / iris-10 / amber-9
 DARK = dict(
     bg="#141726",       # indigo-dark-2  背景
     border="#304384",   # indigo-dark-6  细线
     text="#d6e1ff",     # indigo-dark-12 正文
     sub="#9eb1ff",      # indigo-dark-11 次要文字
-    cyan="#4ccce6",     # cyan-dark-11   —— 提示词是当文字印的
-    teal="#27b08b",     # jade-dark-10   —— 同上
-    violet="#6e6ade",   # iris-dark-10   —— 窗口标题条，实心色块
-    amber="#ffc53d",    # amber-dark-9   —— 同上
+    cyan="#4ccce6",     # cyan-dark-11   提示词
+    teal="#27b08b",     # jade-dark-10   提示词
+    violet="#6e6ade",   # iris-dark-10   窗口标题条
+    amber="#ffc53d",    # amber-dark-9   光标 / 窗口标题条
 )
 LIGHT = dict(
     bg="#f9f9f8",       # sand-2  背景
     border="#dad9d6",   # sand-6  细线
     text="#21201c",     # sand-12 正文
     sub="#63635e",      # sand-11 次要文字
-    cyan="#00749e",     # sky-11   —— 提示词是当文字印的
-    teal="#027864",     # mint-11  —— 同上
-    violet="#6e56cf",   # violet-9 —— 窗口标题条，实心色块
-    amber="#ab6400",    # amber-11 —— 同上
+    cyan="#00749e",     # sky-11   提示词
+    teal="#027864",     # mint-11  提示词
+    violet="#6e56cf",   # violet-9 窗口标题条
+    amber="#ab6400",    # amber-11 光标 / 窗口标题条
 )
 
 
@@ -69,15 +72,25 @@ def scale_for(font_px: float) -> float:
     return font_px * 12.0 / UPM
 
 
+_missing: set[str] = set()
+
+
 def _glyph(ch: str):
-    return GLYPHS[CMAP[ord(ch)]] if ord(ch) in CMAP else None
+    if ord(ch) not in CMAP:
+        if ch not in _missing:
+            _missing.add(ch)
+            print(f"font has no glyph for U+{ord(ch):04X} {ch!r}", file=sys.stderr)
+        return None
+    return GLYPHS[CMAP[ord(ch)]]
 
 
 def _advance(ch: str, sc: float) -> float:
     g = _glyph(ch)
     if g is not None:
         return g.width * sc
-    return (4.0 if ch == " " else 6.0) * sc  # fallback advance, grid px
+    # 1 grid pixel = 100 font units. sc already maps font units into user space,
+    # so a 6px-wide fallback is 600 units, not 6 * sc.
+    return (400.0 if ch == " " else 600.0) * sc
 
 
 def text_path(s: str, font_px: float, x: float, baseline: float) -> str:
@@ -185,19 +198,23 @@ def banner(p: dict, tag: str) -> None:
     desk.append(f'<rect x="620" y="{baseline}" width="268" height="2" fill="{p["border"]}"/>')
 
     # The terminal window: a titled bar, a prompt, and a cursor.
+    # "terminal" at font_px=2 is ~18px of ink with no descender. A 22px bar
+    # and a baseline 20px below the bar top leave 2px of padding inside the
+    # chrome. The label is solid `sub` (no extra opacity): on the light bar
+    # that is about 4.8:1. At 0.85 opacity the same ink fell to about 3.6:1.
     tx, ty, tw, th = 604, 80, 268, 108
     desk.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" fill="{p["bg"]}" stroke="{p["border"]}" stroke-width="2"/>')
-    desk.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="16" fill="{p["border"]}" opacity="0.6"/>')
+    desk.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="22" fill="{p["border"]}" opacity="0.6"/>')
     for i, col in enumerate([p["cyan"], p["amber"], p["teal"]]):
-        desk.append(f'<rect x="{tx + 6 + i * 11}" y="{ty + 5}" width="6" height="6" fill="{col}"/>')
+        desk.append(f'<rect x="{tx + 6 + i * 11}" y="{ty + 8}" width="6" height="6" fill="{col}"/>')
     desk.append(
-        f'<path d="{text_path("terminal", 2.0, tx + 48, ty + 12)}" fill="{p["sub"]}" opacity="0.85"/>'
+        f'<path d="{text_path("terminal", 2.0, tx + 48, ty + 20)}" fill="{p["sub"]}"/>'
     )
-    # Three prompt lines, typed on one after another.
+    # Three prompt lines. The first baseline sits below the 22px title bar.
     lines = ["$ swift build", "$ pnpm test", "$ git push"]
     for i, line in enumerate(lines):
         x = tx + 10
-        y = ty + 36 + i * 22
+        y = ty + 44 + i * 22
         col = [p["teal"], p["teal"], p["cyan"]][i]
         desk.append(f'<path d="{text_path(line, 2.0, x, y)}" fill="{col}"/>')
         cursor_w = meas(line, 2.0) + 4
@@ -277,16 +294,16 @@ def banner(p: dict, tag: str) -> None:
 {"".join(groups)}
 {"".join(desk)}
 </svg>'''
-    with open(f"{OUT}/banner-{tag}.svg", "w") as f:
-        f.write(svg)
+    write_svg(f"banner-{tag}.svg", svg)
 
 
 # ---------------------------------------------------------------- section headers
-# Each section gets an icon that says what the section is about, rather
-# than the same square for all four. The icon animates on its own clock.
+# Each section gets an icon that says what the section is about.
+# The icon animates on its own clock.
 HEADERS = [
     ("hdr-menubar", "ON THE MENU BAR", "menubar"),
     ("hdr-browser", "IN THE BROWSER", "browser"),
+    ("hdr-machine", "ON THIS MACHINE", "machine"),
     ("hdr-editor", "IN THE EDITOR", "editor"),
     ("hdr-activity", "STACK & ACTIVITY", "activity"),
 ]
@@ -314,6 +331,15 @@ def header_icon(p: dict, kind: str) -> str:
             f'<rect x="9" y="24" width="14" height="2" fill="{c}">'
             f'<animate attributeName="width" values="2;14;2;14;2" keyTimes="0;.25;.5;.75;1" '
             f'calcMode="discrete" dur="2.6s" repeatCount="indefinite"/></rect>'
+        )
+    if kind == "machine":
+        # A local disk with a scan line.
+        return (
+            f'<rect x="7" y="18" width="18" height="14" fill="{p["text"]}" opacity="0.2"/>'
+            f'<rect x="7" y="18" width="18" height="4" fill="{p["text"]}" opacity="0.45"/>'
+            f'<rect x="9" y="24" width="14" height="2" fill="{c}">'
+            f'<animate attributeName="y" values="24;26;28;26;24" keyTimes="0;.25;.5;.75;1" '
+            f'calcMode="discrete" dur="2.2s" repeatCount="indefinite"/></rect>'
         )
     if kind == "editor":
         # A code caret that blinks.
@@ -343,7 +369,7 @@ def header(p: dict, tag: str, name: str, text: str, kind: str) -> None:
     W = int(w + 84)
     dots = "".join(
         f'<rect x="{w + 22 + i * 12:.0f}" y="24" width="6" height="6" fill="{p["cyan"]}" opacity="0">'
-        f'<animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.2;.4;.6;.8;1"'
+        f'<animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.25;.5;.75;1"'
         f' calcMode="discrete" dur="1.8s" begin="{i * 0.3:.1f}s" repeatCount="indefinite"/></rect>'
         for i in range(5))
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="48" viewBox="0 0 {W} 48" role="img" aria-label="{escape(text.title())}">
@@ -351,8 +377,7 @@ def header(p: dict, tag: str, name: str, text: str, kind: str) -> None:
 <path d="{text_path(text, S, tx, 37)}" fill="{p["text"]}"/>
 {dots}
 </svg>'''
-    with open(f"{OUT}/{name}-{tag}.svg", "w") as f:
-        f.write(svg)
+    write_svg(f"{name}-{tag}.svg", svg)
 
 
 # ---------------------------------------------------------------- footer
@@ -364,7 +389,7 @@ def footer(p: dict, tag: str) -> None:
     flank = lambda dx, i, back: (
         f'<rect x="{x0 + dx + (i if dx > 0 else -i) * 14:.0f}" y="28" width="6" height="6" '
         f'fill="{p["sub"]}" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" '
-        f'keyTimes="0;.2;.4;.6;.8;1" calcMode="discrete" dur="1.5s" begin="{((3 - i) if back else i) * 0.3:.1f}s" '
+        f'keyTimes="0;.25;.5;.75;1" calcMode="discrete" dur="1.5s" begin="{((3 - i) if back else i) * 0.3:.1f}s" '
         f'repeatCount="indefinite"/></rect>')
     left = "".join(flank(-30, i, True) for i in range(4))
     right = "".join(flank(tw + 24, i, False) for i in range(4))
@@ -372,8 +397,11 @@ def footer(p: dict, tag: str) -> None:
 {left}{right}
 <path d="{text_path(text, S, x0, 38)}" fill="{p["sub"]}"/>
 </svg>'''
-    with open(f"{OUT}/footer-{tag}.svg", "w") as f:
-        f.write(svg)
+    write_svg(f"footer-{tag}.svg", svg)
+
+
+def write_svg(name: str, svg: str) -> None:
+    (OUT / name).write_text(svg, encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":
