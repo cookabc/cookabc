@@ -5,6 +5,10 @@ on:
     - cron: "23 3 * * *" # daily, off the top of the hour
   workflow_dispatch:
 
+concurrency:
+  group: snake-output
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -19,9 +23,14 @@ jobs:
           outputs: |
             dist/snake-dark.svg?color_snake=%234CCCE6&color_dots=%23082C36,%23045A6E,%23008396,%2300A2C7,%234CCCE6
             dist/snake-light.svg?color_snake=%2300749E&color_dots=%23A9DAED,%2376BFD8,%234CA0C1,%23287F9E,%2300749E
+      - name: require snake svgs
+        run: |
+          test -s dist/snake-dark.svg
+          test -s dist/snake-light.svg
       - uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
         with:
           target_branch: output
           build_dir: dist
+          keep_history: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
