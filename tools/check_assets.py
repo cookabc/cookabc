@@ -42,7 +42,7 @@ def check_file(path: Path) -> list[str]:
 
 
 def main() -> int:
-    files = sorted((ROOT / "assets").glob("*.svg"))
+    files = sorted((ROOT / "assets").rglob("*.svg"))
     if not files:
         print("no SVGs in assets/", file=sys.stderr)
         return 1
