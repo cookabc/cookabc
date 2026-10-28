@@ -15,9 +15,6 @@ I build **native macOS utilities, developer tools, and small web experiences**.
 
 ## Selected work
 
-Real interfaces, from the projects themselves.  
-以下展示图来自各项目公开仓库，保留原貌；点击图片可查看原图。图中数字仅代表原图展示状态。
-
 ### 01 — Kachi
 **Finance English, made into a daily practice.**  
 金融英语学习 PWA：本地优先、支持离线，无需账户。
@@ -27,7 +24,7 @@ Real interfaces, from the projects themselves.
 </a>
 
 `React` `TypeScript` `PWA`  
-[Try Kachi →](https://kachi-game.vercel.app) · [Source →](https://github.com/cookabc/Kachi) · [Image origin](https://github.com/cookabc/Kachi/blob/main/docs/images/home.png)
+[Try Kachi →](https://kachi-game.vercel.app) · [Source →](https://github.com/cookabc/Kachi) · [Original image](https://github.com/cookabc/Kachi/blob/main/docs/images/home.png)
 
 ### 02 — App Universe
 **A considered collection of useful tools.**  
@@ -38,7 +35,7 @@ Real interfaces, from the projects themselves.
 </a>
 
 `Next.js` `React` `TypeScript`  
-[Explore the directory →](https://app-universe.vercel.app) · [Source →](https://github.com/cookabc/app-universe) · [Image origin](https://github.com/cookabc/app-universe/blob/main/docs/images/home.png)
+[Explore the directory →](https://app-universe.vercel.app) · [Source →](https://github.com/cookabc/app-universe) · [Original image](https://github.com/cookabc/app-universe/blob/main/docs/images/home.png)
 
 ### 03 — Framelet
 **Capture a window. Keep the moment.**  
@@ -49,7 +46,7 @@ Real interfaces, from the projects themselves.
 </a>
 
 `Swift` `macOS` `ScreenCaptureKit`  
-[Explore Framelet →](https://github.com/cookabc/Framelet) · [Image origin](https://github.com/cookabc/Framelet/blob/main/docs/images/overview.png)
+[Explore Framelet →](https://github.com/cookabc/Framelet) · [Original image](https://github.com/cookabc/Framelet/blob/main/docs/images/overview.png)
 
 ### 04 — Vitals
 **Your Mac, at a glance.**  
@@ -60,7 +57,9 @@ Real interfaces, from the projects themselves.
 </a>
 
 `Swift` `SwiftUI` `macOS`  
-[Explore Vitals →](https://github.com/cookabc/vitals) · [Image origin](https://github.com/cookabc/vitals/blob/main/docs/images/overview.png)
+[Explore Vitals →](https://github.com/cookabc/vitals) · [Original image](https://github.com/cookabc/vitals/blob/main/docs/images/overview.png)
+
+<sub>作品图来自各项目公开仓库；图中数字为原图状态。点击图片查看原图。</sub>
 
 ---
 

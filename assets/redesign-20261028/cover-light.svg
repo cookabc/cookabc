@@ -9,8 +9,8 @@
 <text x="48" y="291" font-size="78" font-weight="700" letter-spacing="-4">Less friction.</text>
 <text x="50" y="342" font-size="22" fill="#66746C">For the things you do every day.</text>
 <path d="M48 394H1152" stroke="#D1D6C9"/>
-<text x="48" y="437" font-size="16" letter-spacing="2" fill="#66746C">NATIVE APPS / DEVELOPER TOOLS / WEB</text>
-<text x="1152" y="437" font-size="16" text-anchor="end" fill="#66746C">A SMALL WORKBENCH →</text>
+<text x="48" y="440" font-size="24" fill="#66746C">Native apps · Developer tools · Web</text>
+
 </g>
 <g stroke="#D1D6C9" stroke-width="1">
 <path d="M726 54V357M798 54V357M870 54V357M942 54V357M1014 54V357M1086 54V357M1152 54V357M716 75H1152M716 147H1152M716 219H1152M716 291H1152M716 357H1152" opacity=".65"/>
