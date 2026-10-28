@@ -1,130 +1,61 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <img src="assets/banner-light.svg" width="900" alt="cookabc — small, finished tools for the Mac and the editor">
-  </picture>
+  <a href="https://github.com/cookabc">
+    <picture>
+      <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/v2/observatory-hero-dark-mobile.svg">
+      <source media="(max-width: 600px)" srcset="assets/v2/observatory-hero-light-mobile.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/v2/observatory-hero-dark.svg">
+      <img src="assets/v2/observatory-hero-light.svg" width="100%" alt="cookabc — Small tools. Closely observed. An independent practice in local-first software, careful interfaces, and useful details.">
+    </picture>
+  </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/cookabc?tab=followers"><img src="https://img.shields.io/github/followers/cookabc?label=followers&style=flat-square&color=0090ff&labelColor=1f2d5c&logo=github" alt="followers"></a>
-  &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=cookabc&style=flat-square&color=00a2c7&labelColor=1f2d5c&label=views" alt="profile views">
-</p>
+<h2>Observe.</h2>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-menubar-dark.svg">
-    <img src="assets/hdr-menubar-light.svg" height="40" alt="On the menu bar">
-  </picture>
-</p>
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/cookabc/vitals"><img src="https://raw.githubusercontent.com/cookabc/vitals/main/docs/images/overview.png" alt="Vitals pixel dashboard: CPU, GPU, memory, network, disk, battery and system on one dark panel" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/vitals">Vitals</a></b> — a system monitor that lives only in the menu bar. A live CPU mini-curve sits in the bar itself; a pixel dashboard behind it covers CPU, GPU, memory, network, disk, battery and processes.<br><br>
-      <a href="https://github.com/cookabc/vitals"><img src="https://img.shields.io/badge/macOS-26%2B-113264?style=flat-square&logo=apple&labelColor=1F2D5C" alt="macOS 26+"></a>
-      <img src="https://img.shields.io/badge/Swift-6-113264?style=flat-square&logo=swift&labelColor=1F2D5C" alt="Swift 6">
-      <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/cookabc/ai-toolbox"><img src="https://raw.githubusercontent.com/cookabc/ai-toolbox/main/docs/images/hero.png" alt="AI Toolbox hero: Codex and Claude Code usage and provider configuration in a pixel-styled menu bar panel" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/ai-toolbox">AI Toolbox</a></b> — local usage, trends and provider switching for Codex &amp; Claude Code, in a pixel-styled panel. Reads this Mac's own logs.<br><br>
-      <a href="https://github.com/cookabc/ai-toolbox"><img src="https://img.shields.io/badge/macOS-13%2B-113264?style=flat-square&logo=apple&labelColor=1F2D5C" alt="macOS 13+"></a>
-      <img src="https://img.shields.io/badge/Swift-6%20%2C%20zero%20SPM%20deps-113264?style=flat-square&logo=swift&labelColor=1F2D5C" alt="Swift 6, zero SPM deps">
-      <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>
-      <a href="https://github.com/cookabc/Framelet"><img src="https://raw.githubusercontent.com/cookabc/Framelet/main/docs/images/overview.png" alt="Framelet: choose a window or screen area, then preview and export recordings" width="100%"></a><br><br>
-      <b><a href="https://github.com/cookabc/Framelet">Framelet</a></b> — a native Mac recorder for windows and screen areas. Pause, resume, preview and export to MP4 or GIF.<br><br>
-      <img src="https://img.shields.io/badge/macOS-15%2B-113264?style=flat-square&logo=apple&labelColor=1F2D5C" alt="macOS 15+">
-      <img src="https://img.shields.io/badge/Swift-6%20%2C%20zero%20SPM%20deps-113264?style=flat-square&logo=swift&labelColor=1F2D5C" alt="Swift 6, zero SPM deps">
-      <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">
-    </td>
-  </tr>
-</table>
+<p>A signal you can read at a glance. A frame you can choose with intention.</p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-browser-dark.svg">
-    <img src="assets/hdr-browser-light.svg" height="40" alt="In the browser">
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/v2/observatory-observe-dark-mobile.webp">
+    <source media="(max-width: 600px)" srcset="assets/v2/observatory-observe-light-mobile.webp">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/v2/observatory-observe-dark.webp">
+    <img src="assets/v2/observatory-observe-light.webp" width="100%" alt="Vitals live system signals and the Framelet capture frame">
   </picture>
 </p>
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://kachi-game.vercel.app"><img src="https://raw.githubusercontent.com/cookabc/Kachi/main/docs/images/home.png" alt="Kachi hero: Hedge or Pledge — telling finance-English word pairs apart" width="100%"></a><br><br>
-      <b><a href="https://kachi-game.vercel.app">Kachi</a></b>, <a href="https://github.com/cookabc/Kachi">repo</a> — a finance-English learning PWA: 40 finance concepts, 23 lessons, 208 quiz questions and a knowledge-graph view. Local-first, works offline, no account.<br><br>
-      <a href="https://kachi-game.vercel.app"><img src="https://img.shields.io/badge/live-kachi--game.vercel.app-113264?style=flat-square&logo=vercel&labelColor=1F2D5C" alt="live"></a>
-      <img src="https://img.shields.io/badge/PWA-offline--ready-113264?style=flat-square&labelColor=1F2D5C" alt="PWA, offline ready">
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://app-universe.vercel.app"><img src="assets/app-universe-home.png" alt="App Universe hero: discover tools that earn their place" width="100%"></a><br><br>
-      <b><a href="https://app-universe.vercel.app">App Universe</a></b>, <a href="https://github.com/cookabc/app-universe">repo</a> — a bilingual (EN/中文) curated directory of 31 design, gaming and productivity tools, each entry with a live preview and notes on when to use it.<br><br>
-      <a href="https://app-universe.vercel.app"><img src="https://img.shields.io/badge/live-app--universe.vercel.app-113264?style=flat-square&logo=vercel&labelColor=1F2D5C" alt="live"></a>
-      <img src="https://img.shields.io/badge/Next.js-16-113264?style=flat-square&logo=nextdotjs&labelColor=1F2D5C" alt="Next.js">
-    </td>
-  </tr>
-</table>
+**[Vitals](https://github.com/cookabc/vitals)** — a system monitor that lives only in the menu bar, with a live CPU mini-curve and a detailed pixel dashboard.<br>
+**[AI Toolbox](https://github.com/cookabc/ai-toolbox)** — local AI usage, trends and provider switching for Codex and Claude Code.<br>
+**[Framelet](https://github.com/cookabc/Framelet)** — native Mac recording for windows and screen areas, with preview and MP4 or GIF export.
+
+<h2>Record.</h2>
+
+<p>What your tools leave behind deserves the same care as what they show.</p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-machine-dark.svg">
-    <img src="assets/hdr-machine-light.svg" height="40" alt="On this machine">
+    <source media="(max-width: 600px)" srcset="assets/v2/observatory-record-dark-mobile.webp">
+    <img src="assets/v2/observatory-record-dark.webp" width="100%" alt="Local coding-agent sessions, made inspectable in Agent Inspector">
   </picture>
 </p>
 
-**[Agent Inspector](https://github.com/cookabc/zcode-inspector)** — local disk usage and session history for ZCode, Codex, Claude Code, Cursor, and DeepSeek Harness. It shows what deleting a category would remove, then lets you choose. The file inventory is metadata from `stat` (Codex classification also reads the first line of a rollout). A separate read-only security audit reads session text for leaked credentials and has no delete action. The page listens on `127.0.0.1` only.
+**[Agent Inspector](https://github.com/cookabc/zcode-inspector)** — local disk usage and session history for five coding agents. Inspect what a cleanup would remove before choosing anything. A separate read-only security audit has no delete action; the page listens on `127.0.0.1` only.
 
-<p align="center">
-  <a href="https://github.com/cookabc/zcode-inspector"><img src="https://raw.githubusercontent.com/cookabc/zcode-inspector/main/docs/images/overview.png" alt="Agent Inspector overview: disk usage with a cleanup verdict for every category" width="500"></a><br>
-  <img src="https://img.shields.io/badge/Node-22.5%2B-113264?style=flat-square&logo=nodedotjs&labelColor=1F2D5C" alt="Node 22.5+">
-  <img src="https://img.shields.io/badge/dependencies-zero-113264?style=flat-square&labelColor=1F2D5C" alt="zero dependencies">
-  <img src="https://img.shields.io/badge/license-MIT-113264?style=flat-square&labelColor=1F2D5C" alt="MIT">
-</p>
+<h2>Understand.</h2>
+
+<p>Less noise. Better distinctions. Experiences that leave room for thought.</p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-editor-dark.svg">
-    <img src="assets/hdr-editor-light.svg" height="40" alt="In the editor">
+    <source media="(max-width: 600px)" srcset="assets/v2/observatory-understand-dark-mobile.webp">
+    <img src="assets/v2/observatory-understand-dark.webp" width="100%" alt="Kachi finance English lessons and the hand-curated App Universe field guide">
   </picture>
 </p>
 
-- **[Python Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater)** — inline update hints for `requirements.txt` and `pyproject.toml`; one-click updates, with a confirmation before every major bump.<br>
-  <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater"><img src="https://vsmarketplacebadges.dev/version/cookabc.python-dependencies-updater.svg" alt="marketplace version"></a>
-  <img src="https://vsmarketplacebadges.dev/downloads-short/cookabc.python-dependencies-updater.svg" alt="installs">
+**[Kachi](https://kachi-game.vercel.app)** ([source](https://github.com/cookabc/Kachi)) — finance English taught through meaningful distinctions. Local-first, offline-ready, no account.<br>
+**[App Universe](https://app-universe.vercel.app)** ([source](https://github.com/cookabc/app-universe)) — a bilingual, hand-curated field guide to 31 tools, with live previews and notes on when to use them.
 
-- **[npm Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater)** — the same treatment for `package.json`.<br>
-  <a href="https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater"><img src="https://vsmarketplacebadges.dev/version/cookabc.npm-dependencies-updater.svg" alt="marketplace version"></a>
-  <img src="https://vsmarketplacebadges.dev/downloads-short/cookabc.npm-dependencies-updater.svg" alt="installs">
+### In the editor
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hdr-activity-dark.svg">
-    <img src="assets/hdr-activity-light.svg" height="40" alt="Stack and activity">
-  </picture>
-</p>
+- **[Python Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.python-dependencies-updater)** — inline update hints for `requirements.txt` and `pyproject.toml`, with confirmation before every major bump.
+- **[npm Dependencies Updater](https://marketplace.visualstudio.com/items?itemName=cookabc.npm-dependencies-updater)** — the same treatment for `package.json`.
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=swift,ts,nodejs,py,cs,rust,git,githubactions,vscode&perline=9" alt="Swift, TypeScript, Node.js, Python, C#, Rust, Git, GitHub Actions, VS Code">
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cookabc/cookabc/output/snake-dark.svg">
-    <img src="https://raw.githubusercontent.com/cookabc/cookabc/output/snake-light.svg" alt="contribution graph snake animation" width="100%">
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg">
-    <img src="assets/footer-light.svg" width="900" alt="the rest is private or still in the oven">
-  </picture>
-</p>
+<p align="center"><sub>LOCAL FIRST / THOUGHTFULLY FINISHED</sub></p>
