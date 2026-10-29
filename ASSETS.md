@@ -1,21 +1,21 @@
 # Profile artwork
 
-`README.md` is the published GitHub profile. Its images live under
-`assets/fancy-20261029/` (masthead) and `assets/two-projects-20261029/`
-(the two project photographs).
+`README.md` is the published GitHub profile. Every image it shows lives under
+`assets/curated-four-20261029/`.
 
 ## Source material
 
 Artwork is composed from real screenshots of the public products:
 
-- `two-projects-20261029/kachi.png`, `kachi-mobile.png` — Kachi, from `cookabc/Kachi`.
-- `two-projects-20261029/wayseeker.png`, `wayseeker-mobile.png` — Wayseeker, from the live site at `wayseeker.vercel.app`.
-- `fancy-20261029/studio-*.svg` — the studio masthead, including its mobile and dark variants.
+- `kachi.png`, `kachi-mobile.png` — Kachi, from `cookabc/Kachi`.
+- `wayseeker.png`, `wayseeker-mobile.png` — Wayseeker, from the live site at `wayseeker.vercel.app`.
+- `museum.png`, `museum-mobile.png` — Paper Mechanical Museum, from `cookabc/paper-mechanical-museum`.
+- `flow.png`, `flow-mobile.png` — Financial Sankey Studio, from `cookabc/financial-sankey`.
+- `cabinet-*.svg` — the studio masthead, including its mobile and dark variants.
 - `ArkPixel-OFL.txt`, `ark-pixel-12px-proportional-latin.woff2` — Ark Pixel, retained for instrument annotations.
 
-Older sets (`assets/v2/`, `assets/redesign-20261028/`,
-`assets/redesign-20261029/`, and the loose `assets/*.png`) belong to retired
-profile layouts and are no longer referenced by the README.
+Older sets from retired profile layouts have been removed rather than left to
+rot; git history still holds them.
 
 ## Rules
 

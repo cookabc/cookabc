@@ -30,7 +30,7 @@ Name: cookabc. Creative statement: "Small tools. Thoughtfully finished." The use
 
 ## Evidence on Hand
 
-Public product screenshots and repository links for Vitals, AI Toolbox, Framelet, Agent Inspector, Kachi, Wayseeker and two dependency-updater extensions. Agent Inspector has a published v2.0.0 release. Ark Pixel lettering and its OFL license are included locally. Product descriptions must be checked against their current public repositories.
+Public product screenshots and repository links for the four featured projects — Kachi, Wayseeker, Paper Mechanical Museum and Financial Sankey Studio — each with English and Chinese editions. Ark Pixel lettering and its OFL license are included locally. Product descriptions must be checked against their current public repositories.
 
 ## Product Principles
 
