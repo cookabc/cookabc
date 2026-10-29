@@ -1,68 +1,31 @@
 # Selected work
 
-Native macOS apps · Developer tools · Small web experiences
+## [Kachi](https://kachi-game.vercel.app/)
 
-## [Kachi →](https://kachi-game.vercel.app)
-金融英语，练成日常。Local-first, offline-capable, no account. **[Open app](https://kachi-game.vercel.app)** · [Source](https://github.com/cookabc/Kachi)
+**别背单词，学会分辨。** 从 HEDGE / PLEDGE 开始，在概念对照中理解财经英语。
 
-<a href="https://kachi-game.vercel.app">
+[进入实验室 →](https://kachi-game.vercel.app/) · [查看源码](https://github.com/cookabc/Kachi)
+
+<a href="https://kachi-game.vercel.app/">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/redesign-20261029/gallery/kachi-mobile.png">
-    <img src="assets/redesign-20261029/gallery/kachi.png" width="1440" alt="Kachi: a finance-English learning PWA. Desktop shows the complete original screenshot; mobile enlarges an unchanged crop of the hedge versus pledge course card and progress.">
+    <source media="(max-width: 600px)" srcset="assets/two-projects-20261029/kachi-mobile.png">
+    <img src="assets/two-projects-20261029/kachi.png" width="1600" alt="Kachi 财经英语实验室首页局部实拍：用 HEDGE 与 PLEDGE 的对照区分对冲风险和抵押资产；窄视口展示概念课程标题和学习进度。">
   </picture>
 </a>
 
-## [Vitals →](https://github.com/cookabc/vitals)
-把 Mac 的脉搏装进菜单栏。CPU, memory, network, disk, battery, and processes. **[Explore source](https://github.com/cookabc/vitals)**
+## [Wayseeker](https://wayseeker.vercel.app/)
 
-<a href="https://github.com/cookabc/vitals">
+**从当前任务出发，找到顺手的工具。** 人工策展，沿五条工作路径发现工具：从寻找方向，到完成交付。
+
+[寻找下一件工具 →](https://wayseeker.vercel.app/)
+
+<a href="https://wayseeker.vercel.app/">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/redesign-20261029/gallery/vitals-mobile.png">
-    <img src="assets/redesign-20261029/gallery/vitals.png" width="1440" alt="Vitals: a native macOS menu-bar monitor, built with Swift and SwiftUI. Desktop shows the complete original dashboard. Mobile presents two separately cropped source details: the pixel-art chip and CPU activity. Values are illustrative screenshot data, not live readings.">
+    <source media="(max-width: 600px)" srcset="assets/two-projects-20261029/wayseeker-mobile.png">
+    <img src="assets/two-projects-20261029/wayseeker.png" width="1600" alt="Wayseeker 工具指南实拍：以你正在做什么为入口，按工作阶段导航；当前选择寻找方向，展示人工策展的 Rebrand Gallery。">
   </picture>
 </a>
-
-## [App Universe →](https://app-universe.vercel.app)
-值得留下的工具，认真收集。A hand-curated, bilingual directory for design, gaming, and productivity. **[Explore directory](https://app-universe.vercel.app)** · [Source](https://github.com/cookabc/app-universe)
-
-<a href="https://app-universe.vercel.app">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/redesign-20261029/gallery/universe-mobile.png">
-    <img src="assets/redesign-20261029/gallery/universe.png" width="1440" alt="App Universe: a curated English and Chinese tool directory. Desktop shows the complete original homepage. Mobile enlarges its Chinese introduction and lime exploration button, cropped from that same screenshot.">
-  </picture>
-</a>
-
-## Also on the workbench
-
-**[Framelet →](https://github.com/cookabc/Framelet)** — 原生窗口与区域录屏。Pause, resume, and export video or GIF.
-
-<details>
-<summary>Framelet starting interface · 查看启动界面</summary>
-
-<a href="https://github.com/cookabc/Framelet">
-  <img src="assets/redesign-20261029/products/framelet.png" width="640" alt="Framelet original starting interface, not an active recording: recordings sidebar, area selection, cursor, countdown and frame-rate settings.">
-</a>
-
-</details>
-
-**[zcode-inspector →](https://github.com/cookabc/zcode-inspector)** — 看清编码代理留下的文件。Inspect ZCode, Codex, Claude Code, and Cursor disk usage before choosing what to clean. Zero-dependency Node.js.
-
-**[ai-toolbox →](https://github.com/cookabc/ai-toolbox)** — AI 工具的菜单栏控制台。Local Codex and Claude Code usage stats and provider switching, in a native macOS panel.
-
-**[Python dependencies →](https://github.com/cookabc/python-dependencies-updater) / [npm dependencies →](https://github.com/cookabc/npm-dependencies-updater)** — 在编辑器里更新依赖。VS Code inline update hints, one-click upgrades, and major-version warnings.
 
 ---
 
-**[More in the making → All repositories](https://github.com/cookabc?tab=repositories)**
-
-<details>
-<summary>About the images · 作品图来源</summary>
-
-展板使用各公开项目仓库提供的真实截图，桌面保留完整截图，手机呈现标明来源的关键局部裁切，并添加编辑式边框与说明；未伪造产品界面。截图中的数字、日期与状态不是实时数据。移动特写仅截取原图区域并等比缩放；Vitals 的两个局部分开陈列，不代表新的产品布局。完整原图见以下链接。
-
-- [Kachi original](https://github.com/cookabc/Kachi/blob/3897e1d8d238b1ebc7a404d324793595b4561956/docs/images/home.png)
-- [Vitals original](https://github.com/cookabc/vitals/blob/2e48409967ef7c32d1b97de166f162496223bcc1/docs/images/overview.png)
-- [App Universe original](https://github.com/cookabc/app-universe/blob/e2dc018a548d60a4b669677f58b60aee6084e1d6/docs/images/home.png)
-- [Framelet original](https://github.com/cookabc/Framelet/blob/5e57859db981e04e7726005e65bcc2c362262768/docs/images/overview.png)
-
-</details>
+<sub>产品画面实拍于 2026-10-29；数字与学习状态仅代表截图时刻。桌面与窄视口分别取景，局部裁切保留原始内容，未重绘界面。</sub>
