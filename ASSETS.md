@@ -21,6 +21,10 @@ rot; git history still holds them.
 
 - Desktop artwork keeps the complete original screenshot; mobile artwork shows
   a labelled crop of the same source. No product interface is invented.
+- Screenshots show each product in its English interface, captured at 1500px wide
+  (430px on phones) so the profile renders them sharply at full width.
+- The Financial Sankey chart's node labels come from the sample statement, which
+  is Chinese-authored data rather than interface copy; the chrome around it is English.
 - Numbers, dates and states inside the screenshots are not live data.
 - Functional links stay real README links, never text drawn into an image.
 
