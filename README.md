@@ -1,82 +1,111 @@
+**English** · [简体中文](README.zh-CN.md)
+
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/fancy-20261029/studio-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/fancy-20261029/studio-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/fancy-20261029/studio-dark.svg">
-  <img src="assets/fancy-20261029/studio-light.svg" width="1200" alt="cookabc 创作工作室。Make room for curiosity：为好奇心留一点空间。Kachi 让概念更清楚，Wayseeker 让下一步更明确。">
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/curated-four-20261029/cabinet-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/cabinet-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/curated-four-20261029/cabinet-dark.svg">
+  <img src="assets/curated-four-20261029/cabinet-light.svg" width="1600" alt="cookabc’s cabinet of curiosities: a concept card, a compass, a gear and flow ribbons, representing learning, discovery, play and clarity.">
 </picture>
 
-# 把好奇心，做成可以使用的东西。
+# Useful things, with a playful point of view.
 
-两个小作品，一条共同的线索：**让理解更清楚，让行动更轻松。**
+I’m **cookabc**. A few selected public projects for learning, finding, playing and making sense of things.
 
-[01 · 学会分辨](#kachi)　／　[02 · 找到方向](#wayseeker)　／　[打开口袋实验室 ↓](#pocket-lab)
+[Learn](#kachi) · [Discover](#wayseeker) · [Play](#museum) · [Visualize](#flow)
 
-## Selected work
+<a name="kachi"></a>
 
-### [Kachi](https://kachi-game.vercel.app/)
+## 01 / Kachi
 
-**别背单词，学会分辨。** 从 HEDGE / PLEDGE 开始，在概念对照中理解财经英语。
+**Financial English, learned through the distinctions that matter.** Concept pairs, short lessons and practice, in English and Chinese.
 
-[进入实验室 →](https://kachi-game.vercel.app/) · [查看源码](https://github.com/cookabc/Kachi)
+[Try it live →](https://kachi-game.vercel.app/) · [View code →](https://github.com/cookabc/Kachi)
 
 <a href="https://kachi-game.vercel.app/">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/two-projects-20261029/kachi-mobile.png">
-    <img src="assets/two-projects-20261029/kachi.png" width="1600" alt="Kachi 财经英语实验室首页局部实拍：用 HEDGE 与 PLEDGE 的对照区分对冲风险和抵押资产；窄视口展示概念课程标题和学习进度。">
+    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/kachi-mobile.png">
+    <img src="assets/curated-four-20261029/kachi.png" width="1600" alt="Kachi live-site concept close-up: HEDGE versus PLEDGE, with the distinction between managing risk and pledging collateral.">
   </picture>
 </a>
 
-### [Wayseeker](https://wayseeker.vercel.app/)
+<a name="wayseeker"></a>
 
-**从当前任务出发，找到顺手的工具。** 人工策展，沿五条工作路径发现工具：从寻找方向，到完成交付。
+## 02 / Wayseeker
 
-[寻找下一件工具 →](https://wayseeker.vercel.app/)
+**Find the next useful tool by starting with the work in front of you.** A bilingual field guide to design and development tools, organised into five working paths.
+
+[Try it live →](https://wayseeker.vercel.app/) · [View code →](https://github.com/cookabc/wayseeker)
 
 <a href="https://wayseeker.vercel.app/">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/two-projects-20261029/wayseeker-mobile.png">
-    <img src="assets/two-projects-20261029/wayseeker.png" width="1600" alt="Wayseeker 工具指南实拍：以你正在做什么为入口，按工作阶段导航；当前选择寻找方向，展示人工策展的 Rebrand Gallery。">
+    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/wayseeker-mobile.png">
+    <img src="assets/curated-four-20261029/wayseeker.png" width="1600" alt="Wayseeker live-site workflow and preview close-up: Find a direction is selected, with a real Rebrand Gallery preview and curator entry points.">
   </picture>
 </a>
 
-<a name="pocket-lab"></a>
+<a name="museum"></a>
 
-## Pocket lab · 顺手玩一下
+## 03 / Paper Mechanical Museum
+
+**Twelve everyday machines, made into hands-on little exhibits.** Turn, press and explore mechanical ideas on a paper-textured workbench.
+
+[Try it live →](https://paper-mechanical-museum.vercel.app/) · [View code →](https://github.com/cookabc/paper-mechanical-museum)
+
+<a href="https://paper-mechanical-museum.vercel.app/">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/museum-mobile.png">
+    <img src="assets/curated-four-20261029/museum.png" width="1600" alt="Paper Mechanical Museum live homepage close-up: a complete isometric coffee machine on a paper-textured display.">
+  </picture>
+</a>
+
+<sub>Includes foundations and derivative work from Colorfigures / ISO-GLOW / iso-figure. [Sources, credits & licensing](https://github.com/cookabc/paper-mechanical-museum/blob/main/THIRD_PARTY_NOTICES.md).</sub>
+
+<a name="flow"></a>
+
+## 04 / Flow Ledger · 流账
+
+**Turn structured financial data into proportional, checkable flows.** A local-first Sankey workspace with data input, balance checks and SVG / PNG export.
+
+[Try it live →](https://financial-sankey-studio.chuangcius.chatgpt.site/) · [View code →](https://github.com/cookabc/financial-sankey)
+
+<a href="https://financial-sankey-studio.chuangcius.chatgpt.site/">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/flow-mobile.png">
+    <img src="assets/curated-four-20261029/flow.png" width="1600" alt="Flow Ledger live workspace showing its existing sample Sankey chart. Desktop shows input and the complete chart; mobile shows the actual horizontally scrollable viewport, not the full chart. Sample amounts are not independently verified.">
+  </picture>
+</a>
+
+<sub>The mobile chart scrolls horizontally. Sample amounts in the screenshot illustrate the product, not an independent financial verification.</sub>
+
+## A little curiosity break
 
 <details>
-<summary><strong>01 / 长得像，意思就一样吗？</strong></summary>
+<summary><strong>Collateral, or protection against risk?</strong></summary>
 
-**HEDGE / PLEDGE**
+Putting up an asset as collateral: **PLEDGE**. Managing exposure to risk: **HEDGE**.
 
-一家公司用资产作抵押来借钱，这里是 HEDGE，还是 PLEDGE？
+Similar-looking words do different work. [Keep exploring in Kachi →](https://kachi-game.vercel.app/)
 
-<details>
-<summary>翻开答案</summary>
-
-**PLEDGE.** 关键词是「拿资产作抵押」。HEDGE 关注的是「对冲风险」。
-
-把相似的词放在一起，差异才会浮出来。
-
-[继续在 Kachi 里分辨 →](https://kachi-game.vercel.app/)
-
-</details>
 </details>
 
 <details>
-<summary><strong>02 / 收藏了很多工具，然后呢？</strong></summary>
+<summary><strong>More hands-on, less instruction manual?</strong></summary>
 
-先补完这句话：**我现在要完成 ______。**
+[Step up to the hand-cranked generator →](https://paper-mechanical-museum.vercel.app/#/generator). Change the cranking speed and watch the bulb and readouts.
 
-找方向、做表达、搭产品，还是完成交付？任务明确以后，再去选工具。
-
-[带着这个问题，打开 Wayseeker →](https://wayseeker.vercel.app/)
+It is an interactive teaching model, not a real-device performance simulation.
 
 </details>
 
-<br>
+<details>
+<summary>About the screenshots & presentation</summary>
 
-**Stay curious. Make it useful. Repeat.**
+Captured from the real, live sites on 29 October 2026, with separate desktop and mobile framing. Close-ups are crops, not redrawn interfaces. Kachi shows a concept close-up; Wayseeker shows the workflow and tool preview; the museum shows its coffee machine; Flow Ledger shows its workspace.
+
+Progress and sample data reflect the captured state only. Public source and deployed versions may differ. Project licences and third-party rights remain with their respective repositories.
+
+</details>
 
 ---
 
-<sub>产品画面实拍于 2026-10-29；数字与学习状态仅代表截图时刻。桌面与窄视口分别取景，局部裁切保留原始内容，未重绘界面。</sub>
+<sub>C’est la vie. Stay curious. Keep making.</sub>
