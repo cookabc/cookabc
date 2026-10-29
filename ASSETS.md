@@ -1,25 +1,30 @@
-# Local Observatory assets
+# Profile artwork
 
-`README.md` is the published GitHub profile. `preview-v2.html` is its complete visual study, including navigation and links that are supplied as text in the README.
+`README.md` is the published GitHub profile. Its images live under
+`assets/fancy-20261029/` (masthead) and `assets/two-projects-20261029/`
+(the two project photographs).
 
 ## Source material
 
-- `assets/vitals.png`: Vitals product screenshot from `cookabc/vitals/docs/images/overview.png`.
-- `assets/kachi.png`: Kachi product screenshot from `cookabc/Kachi/docs/images/home.png`.
-- `assets/app-universe-current.png`: current App Universe screenshot from `031_app-universe/docs/images/home.png`.
-- Agent Inspector artwork uses `033_zcode-inspector/docs/images/all-tools.png`, the actual local archive.
-- `assets/v2/fonts/bricolage.ttf` and `bricolage-OFL.txt`: Bricolage Grotesque from `google/fonts/ofl/bricolagegrotesque`.
-- Ark Pixel is retained for instrument annotations under `assets/ArkPixel-OFL.txt`.
+Artwork is composed from real screenshots of the public products:
 
-## Publication artwork
+- `two-projects-20261029/kachi.png`, `kachi-mobile.png` — Kachi, from `cookabc/Kachi`.
+- `two-projects-20261029/wayseeker.png`, `wayseeker-mobile.png` — Wayseeker, from the live site at `wayseeker.vercel.app`.
+- `fancy-20261029/studio-*.svg` — the studio masthead, including its mobile and dark variants.
+- `ArkPixel-OFL.txt`, `ark-pixel-12px-proportional-latin.woff2` — Ark Pixel, retained for instrument annotations.
 
-`tools/export_v2.mjs` renders `preview-v2.html` into the files under `assets/v2/` using the zero-dependency CDP helper from `033_zcode-inspector`. Run it with Node 24.22.1. It starts its own local servers, waits for image decoding, and uses unique page URLs to prevent navigation-cache mixing.
+Older sets (`assets/v2/`, `assets/redesign-20261028/`,
+`assets/redesign-20261029/`, and the loose `assets/*.png`) belong to retired
+profile layouts and are no longer referenced by the README.
 
-- `observatory-hero-{light,dark}{,-mobile}.svg`: static first frame plus one native SMIL scanning line, with a static reduced-motion alternative.
-- `observatory-{observe,record,understand}-*.webp`: responsive scene artwork. Observe has light and dark variants; Record and Understand keep their material surfaces in both themes.
-- Mobile artwork is composed at 390 CSS pixels and exported at 2x resolution.
-- Functional links remain real README links, not text pretending to be buttons inside an image.
+## Rules
 
-The `LOCAL` lettering in Record is decorative and hidden from accessibility APIs in the HTML study. No transient session counts or live metrics are presented as personal achievements.
+- Desktop artwork keeps the complete original screenshot; mobile artwork shows
+  a labelled crop of the same source. No product interface is invented.
+- Numbers, dates and states inside the screenshots are not live data.
+- Functional links stay real README links, never text drawn into an image.
 
-`tools/check_assets.py` validates SVG syntax and SMIL timelines recursively.
+## Checking
+
+`tools/check_assets.py` validates SMIL timelines on any SVG under `assets/`,
+and treats a raster-only set as valid rather than failing.
