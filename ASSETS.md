@@ -32,3 +32,11 @@ rot; git history still holds them.
 
 `tools/check_assets.py` validates SMIL timelines on any SVG under `assets/`,
 and treats a raster-only set as valid rather than failing.
+
+## Font licence
+
+The font file `assets/ark-pixel-12px-proportional-latin.woff2` is Ark Pixel 12px
+proportional Latin by TakWolf. It is **not** covered by this repository's MIT
+licence; it is licensed under the SIL Open Font License, Version 1.1. The full
+text is in `assets/ArkPixel-OFL.txt` and must travel with the font file.
+
