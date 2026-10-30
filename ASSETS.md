@@ -27,8 +27,12 @@ Artwork is composed from real screenshots of the public products:
 
 ## Checking
 
-`tools/check_assets.py` validates SMIL timelines on any SVG under `assets/`,
-and treats a raster-only set as valid rather than failing.
+Run `python3 tools/check_assets.py` and `python3 -m unittest discover -s tests -v`.
+The check validates both published README editions, local image references, alt
+text, explicit anchors, matching bilingual destinations, PNG dimensions and SVG
+animation timelines (including non-finite values). It also rejects executable SVG
+content. Static SVGs and raster-only image sets are supported. No rendering or
+Python packages are needed; screenshots still need visual review on GitHub.
 
 ## Font licence
 
