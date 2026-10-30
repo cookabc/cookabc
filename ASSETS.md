@@ -14,9 +14,6 @@ Artwork is composed from real screenshots of the public products:
 - `cabinet-*.svg` — the studio masthead, including its mobile and dark variants.
 - `ArkPixel-OFL.txt`, `ark-pixel-12px-proportional-latin.woff2` — Ark Pixel, retained for instrument annotations.
 
-Older sets from retired profile layouts have been removed rather than left to
-rot; git history still holds them.
-
 ## Rules
 
 - Desktop artwork keeps the complete original screenshot; mobile artwork shows
