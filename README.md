@@ -32,7 +32,7 @@ I’m **cookabc**. A few selected public projects for learning, finding, playing
 
 ## 02 / Wayseeker
 
-**Find the next useful tool by starting with the work in front of you.** A bilingual field guide to design and development tools, organised into five working paths.
+**Find the next useful tool by starting with the work in front of you.** A bilingual field guide to design and development tools, organised into five working paths. When one tool isn't enough, it deals a five-step plan around a single anchor — swap any step, then copy it as Markdown.
 
 [Try it live →](https://wayseeker.vercel.app/) · [View code →](https://github.com/cookabc/wayseeker)
 
@@ -100,7 +100,7 @@ It is an interactive teaching model, not a real-device performance simulation.
 <details>
 <summary>About the screenshots & presentation</summary>
 
-Captured from the real, live sites on 29 October 2026, with separate desktop and mobile framing. Close-ups are crops, not redrawn interfaces. Kachi shows a concept close-up; Wayseeker shows the workflow and tool preview; the museum shows its coffee machine; Flow Ledger shows its workspace.
+Captured from the real, live sites — Kachi, the museum and Flow Ledger on 29 October 2026; Wayseeker on 31 October 2026, after its catalogue curation and plan-generator update. Separate desktop and mobile framing. Close-ups are crops, not redrawn interfaces. Kachi shows a concept close-up; Wayseeker shows the workflow and tool preview; the museum shows its coffee machine; Flow Ledger shows its workspace.
 
 Progress and sample data reflect the captured state only. Public source and deployed versions may differ. Project licences and third-party rights remain with their respective repositories.
 
