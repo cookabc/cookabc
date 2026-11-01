@@ -12,25 +12,25 @@ Developers, designers and prospective users arriving at the public GitHub profil
 
 ## Product Purpose
 
-Present a coherent body of small, thoughtfully finished tools for macOS, coding agents, browsers and editors. The profile establishes a personal technical brand through real work rather than activity counters or unsupported claims.
+Present two featured projects, Kachi and Wayseeker, as one idea: small tools that help you tell things apart. The profile establishes a personal brand through real work rather than activity counters or unsupported claims.
 
 ## Positioning
 
-A small, independent portfolio spanning native Mac utilities, local-first agent tooling, focused web experiences and editor extensions. Its distinction is care for a specific use case and a finished interaction, not the number of technologies or repositories.
+A deliberately short list: only Kachi (finance English taught in confusion pairs) and Wayseeker (a cabinet of tools filed against the habits they replace). Its distinction is care for a specific use case and a finished interaction, not the number of technologies or repositories.
 
 ## Capabilities and Constraints
 
 The public surface is a GitHub Profile README. Shipping markup must stay within GitHub's supported Markdown/HTML subset; expressive visuals must be local images or SVG with accessible alternatives. A separate local HTML preview can show the complete composition but is not itself a deployable replacement for the profile.
 
-The personal profile supports light and dark artwork and one restrained scanning animation. Do not invent metrics, real-time activity, private-project claims, testimonials or professional credentials.
+The personal profile supports light and dark artwork, phone-width variants, and one animated moment (the masthead's plates coming into register). Do not invent metrics, real-time activity, private-project claims, testimonials or professional credentials.
 
 ## Brand Commitments
 
-Name: cookabc. Creative statement: "Small tools. Thoughtfully finished." The user explicitly requested a fancy, genuinely redesigned presentation, with pixel lettering retained as a recognizable signature and only one animated visual moment. The Studio profile has a separate, cinematic game identity and must not inherit this pixel system.
+Name: cookabc. Statement: "Two tools for telling things apart." The user asked for a fancy, genuinely redesigned presentation that shows only Kachi and Wayseeker (2026-11-01). Ark Pixel lettering stays as the printer's-annotation voice. One animated moment only. The Studio profile has a separate, cinematic game identity and must not inherit this system.
 
 ## Evidence on Hand
 
-Public product screenshots and repository links for the four featured projects — Kachi, Wayseeker, Paper Mechanical Museum and Financial Sankey Studio — each with English and Chinese editions. Ark Pixel lettering and its OFL license are included locally. Product descriptions must be checked against their current public repositories.
+Live captures of kachi-game.vercel.app and wayseeker.vercel.app (`tools/capture.mjs`), product copy from cookabc/Kachi and cookabc/wayseeker, and Wayseeker's shared prescription 3u1xmp. English and Chinese profile editions. Counts and copy must be re-checked against the repositories whenever the products change.
 
 ## Product Principles
 

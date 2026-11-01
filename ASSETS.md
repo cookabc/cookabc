@@ -1,43 +1,61 @@
 # Profile artwork
 
-`README.md` is the published GitHub profile. Every image it shows lives under
-`assets/curated-four-20261029/`.
+`README.md` and `README.zh-CN.md` are the published GitHub profile. Every image
+they show lives under `assets/proof-20261101/`, in four editions: desktop and
+phone, light and dark.
+
+## Rebuilding
+
+```bash
+npm install && npx playwright install chromium   # once
+node tools/capture.mjs                            # live sites → .capture/
+python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
+.venv/bin/python tools/render.py                  # .capture/ → assets/proof-20261101/
+```
+
+`render.py` deletes and rewrites the whole artwork folder, so a run always
+matches the code.
 
 ## Source material
 
-Artwork is composed from real screenshots of the public products:
-
-- `kachi.png`, `kachi-mobile.png` — Kachi, from `cookabc/Kachi`.
-- `wayseeker.png`, `wayseeker-mobile.png` — Wayseeker, from the live site at `wayseeker.vercel.app`.
-- `museum.png`, `museum-mobile.png` — Paper Mechanical Museum, from `cookabc/paper-mechanical-museum`.
-- `flow.png`, `flow-mobile.png` — Financial Sankey Studio, from `cookabc/financial-sankey`.
-- `cabinet-*.svg` — the studio masthead, including its mobile and dark variants.
-- `ArkPixel-OFL.txt`, `ark-pixel-12px-proportional-latin.woff2` — Ark Pixel, retained for instrument annotations.
+- `*-proof-*.svg`: typeset sheets. Every word on them comes from the products.
+  Kachi uses the rally / selloff concept and trick from
+  `content/packs/t1-finance-news/en-US/course.json`, plus pairs and counts
+  from all six packs. Wayseeker uses prescription 3u1xmp, copied from the live
+  site's Markdown export.
+- `*-screens-*.png`: unretouched captures of the live sites, made by
+  `tools/capture.mjs` at 1440 px (desktop) and 390 px (phone). They are scaled
+  and framed, never redrawn.
+- `masthead-*.svg`: the name sheet, with the profile's only animation.
 
 ## Rules
 
-- Desktop artwork keeps the complete original screenshot; mobile artwork shows
-  a labelled crop of the same source. No product interface is invented.
-- Screenshots show each product in its English interface, captured at 1500px wide
-  (430px on phones) so the profile renders them sharply at full width.
-- The Financial Sankey chart's node labels come from the sample statement, which
-  is Chinese-authored data rather than interface copy; the chrome around it is English.
-- Numbers, dates and states inside the screenshots are not live data.
-- Functional links stay real README links, never text drawn into an image.
+- Two inks: plate A (blue) and plate B (red), plus their overprint. Only the
+  captured screens bring in any other colour.
+- Type is converted to outlines at build time, so the SVGs do not depend on
+  fonts installed on the viewer's machine.
+- Numbers, dates and states in the screens are a snapshot of capture day, not
+  live data.
+- Real links stay in the Markdown; none are drawn into an image.
 
 ## Checking
 
 Run `python3 tools/check_assets.py` and `python3 -m unittest discover -s tests -v`.
-The check validates both published README editions, local image references, alt
-text, explicit anchors, matching bilingual destinations, PNG dimensions and SVG
-animation timelines (including non-finite values). It also rejects executable SVG
-content. Static SVGs and raster-only image sets are supported. No rendering or
-Python packages are needed; screenshots still need visual review on GitHub.
+The checker validates both README editions, local image references, alt text,
+explicit anchors, matching bilingual destinations, PNG dimensions and SVG
+animation timelines. It also rejects executable SVG content.
 
-## Font licence
+## Font licences
 
-The font file `assets/ark-pixel-12px-proportional-latin.woff2` is Ark Pixel 12px
-proportional Latin by TakWolf. It is **not** covered by this repository's MIT
-licence; it is licensed under the SIL Open Font License, Version 1.1. The full
-text is in `assets/ArkPixel-OFL.txt` and must travel with the font file.
+None of these fonts is covered by this repository's MIT licence. All are under
+the SIL Open Font License 1.1.
 
+- `assets/ark-pixel-12px-proportional-latin.woff2`: Ark Pixel by TakWolf. Full
+  text in `assets/ArkPixel-OFL.txt`.
+- `tools/fonts/archivo-latin.woff2`: Archivo by the Archivo Project Authors
+  (Omnibus-Type).
+- `tools/fonts/bricolage-grotesque-latin.woff2`: Bricolage Grotesque by the
+  Bricolage Grotesque Project Authors.
+
+The build only reads these fonts to draw outlines; no font file ships inside
+the artwork.

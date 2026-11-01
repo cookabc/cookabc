@@ -1,111 +1,79 @@
 [English](README.md) · **简体中文**
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/curated-four-20261029/cabinet-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/cabinet-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/curated-four-20261029/cabinet-dark.svg">
-  <img src="assets/curated-four-20261029/cabinet-light.svg" width="1600" alt="cookabc 的好奇心小柜：概念卡、罗盘、齿轮与流带，分别代表学习、发现、动手探索与看清流向。">
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/masthead-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/masthead-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/masthead-dark.svg">
+  <img src="assets/proof-20261101/masthead-light.svg" width="1600" alt="cookabc，用蓝、红两种油墨套印，故意错开一点版。两件帮你分清事物的小工具。">
 </picture>
 
-# 有用的东西，也可以有点好玩。
+你好，我是 **cookabc**。我做帮人「分清」的小工具：分清一个词和它的双胞胎，分清一个将就的习惯和能替代它的工具。
 
-我是 **cookabc**。这里精选了四个公开项目：学习、发现、动手玩，以及让数据更好懂。
-
-[学会分辨](#kachi) · [找到方向](#wayseeker) · [动手探索](#museum) · [看清流向](#flow)
+[Kachi](#kachi) · [Wayseeker](#wayseeker)
 
 <a name="kachi"></a>
 
-## 01 / Kachi
+## Kachi
 
-**把容易混淆的概念放在一起，学懂真正有用的财经英语。** 概念对照、短课程与练习，提供中英双语内容。
+**财经英语，成对来学。** 财经标题里错一个词，整条消息的意思就反了。所以每个词都和最容易混淆的「双胞胎」一起出现，每道题都要靠分清两者才能答对。
 
-[打开体验 →](https://kachi-game.vercel.app/) · [查看代码 →](https://github.com/cookabc/Kachi)
+**[开始玩 Kachi →](https://kachi-game.vercel.app/)** · [源码](https://github.com/cookabc/Kachi)
 
 <a href="https://kachi-game.vercel.app/">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/kachi-mobile.png">
-    <img src="assets/curated-four-20261029/kachi.png" width="1600" alt="Kachi 正式站概念局部实拍：HEDGE 与 PLEDGE 对照，分辨对冲风险与提供抵押品。">
-  </picture>
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-proof-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/kachi-proof-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-proof-dark.svg">
+  <img src="assets/proof-20261101/kachi-proof-light.svg" width="1600" alt="Kachi：rally 印蓝色，selloff 印红色。窍门：rally 是买盘把价格推高，selloff 是卖盘把价格砸低。更多词对：slump / rebound、beat / miss、revenue / earnings、coupon / yield、hawkish / dovish、capex / opex、in-sample / out-of-sample、hedge / pledge。6 个等级、238 个概念、145 组词对、125 节课、1697 道题。">
+</picture>
+</a>
+
+双胞胎教学卡，配插画、音标和真人录音 · 八种题型，从读财经标题到找回测漏洞 · 不扣血、不判失败，答错的题会在课末再来一次 · 每组词对单独做间隔复习 · 离线可用的 PWA，无需账号，进度只存在本机。
+
+<a href="https://kachi-game.vercel.app/">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-screens-mobile-dark.png">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/kachi-screens-mobile-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-screens-dark.png">
+  <img src="assets/proof-20261101/kachi-screens-light.png" width="1600" alt="Kachi 线上实拍：桌面端首页上的下一组词对 rally / selloff，以及手机上的双胞胎教学卡。">
+</picture>
 </a>
 
 <a name="wayseeker"></a>
 
-## 02 / Wayseeker
+## Wayseeker
 
-**从手头的任务出发，找到下一件顺手的工具。** 沿五条工作路径发现设计与开发工具，附中英双语策展说明。当一件工具不够用时，它会围绕一件锚点工具发一套五步方案——逐步可换，一键复制为 Markdown。
+**你在将就什么？** 一只装着 29 件设计与代码工具的百子柜。每件工具都放在它所替代的那个将就旁边，标签上写明何时用、替代什么、要注意什么。每个阶段挑一格抽屉，它会为你写一张五行处方，复制成 Markdown 交给你的 Agent。
 
-[打开体验 →](https://wayseeker.vercel.app/) · [查看代码 →](https://github.com/cookabc/wayseeker)
+**[打开百子柜 →](https://wayseeker.vercel.app/)** · [源码](https://github.com/cookabc/wayseeker)
+
+<a href="https://wayseeker.vercel.app/?plan=3u1xmp">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/wayseeker-proof-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/wayseeker-proof-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/wayseeker-proof-dark.svg">
+  <img src="assets/proof-20261101/wayseeker-proof-light.svg" width="1600" alt="Wayseeker 第 3u1xmp 号处方：五个被划掉的将就，各由一件工具替代：Neal.fun、Impeccable、60fps、Mobbin、Magic Slide。">
+</picture>
+</a>
+
+五列跟着做事的顺序走：找方向 → 建立视觉语言 → 让界面动起来 → 研究真实产品 → 完成并交付。每张标签都写明何时用、替代什么、要注意什么。中英双语。
 
 <a href="https://wayseeker.vercel.app/">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/wayseeker-mobile.png">
-    <img src="assets/curated-four-20261029/wayseeker.png" width="1600" alt="Wayseeker 正式站工作路径与预览局部实拍：当前选择寻找方向，展示 Rebrand Gallery 真实画面和策展入口。">
-  </picture>
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/wayseeker-screens-mobile-dark.png">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/wayseeker-screens-mobile-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/wayseeker-screens-dark.png">
+  <img src="assets/proof-20261101/wayseeker-screens-light.png" width="1600" alt="Wayseeker 线上实拍：桌面端的将就列表与 Timing 的抽屉标签，以及手机上的将就列表。">
+</picture>
 </a>
 
-<a name="museum"></a>
-
-## 03 / 纸上机械馆
-
-**把十二件日常小机器，变成可以亲手操作的小展品。** 在纸张质感的工作台上转动、按下，看见机械如何运转。
-
-[打开体验 →](https://paper-mechanical-museum.vercel.app/) · [查看代码 →](https://github.com/cookabc/paper-mechanical-museum)
-
-<a href="https://paper-mechanical-museum.vercel.app/">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/museum-mobile.png">
-    <img src="assets/curated-four-20261029/museum.png" width="1600" alt="纸上机械馆正式站首页局部实拍：纸张质感展台上完整的等距咖啡机。">
-  </picture>
-</a>
-
-<sub>部分基础与衍生内容承自 Colorfigures / ISO-GLOW / iso-figure；[来源、署名与许可](https://github.com/cookabc/paper-mechanical-museum/blob/main/THIRD_PARTY_NOTICES.md)。</sub>
-
-<a name="flow"></a>
-
-## 04 / 流账
-
-**把结构化财务数据，变成有比例、可核对的流向。** 本机处理的桑基图工作台，支持数据输入、平衡校验与 SVG / PNG 导出。
-
-[打开体验 →](https://financial-sankey-studio.chuangcius.chatgpt.site/) · [查看代码 →](https://github.com/cookabc/financial-sankey)
-
-<a href="https://financial-sankey-studio.chuangcius.chatgpt.site/">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/flow-mobile.png">
-    <img src="assets/curated-four-20261029/flow.png" width="1600" alt="流账线上工作台实拍，展示站点现有示例。桌面包含输入区与完整图表；手机展示真实可横向滚动的局部视口，并非整图。示例金额未独立核实。">
-  </picture>
-</a>
-
-<sub>手机端原生采用横向滚动查看大图；截图中的示例金额仅展示产品，不代表独立财务核验。</sub>
-
-## 先玩一个小问题
-
 <details>
-<summary><strong>一份抵押品，还是一份风险保护？</strong></summary>
+<summary>关于这几张版样</summary>
 
-把资产拿去作抵押：**PLEDGE**。管理风险敞口：**HEDGE**。
-
-长得像的词，不一定在做同一件事。[在 Kachi 中继续分辨 →](https://kachi-game.vercel.app/)
-
-</details>
-
-<details>
-<summary><strong>想动动手，不想读说明？</strong></summary>
-
-[走到手摇发电机前 →](https://paper-mechanical-museum.vercel.app/#/generator)，试着改变摇动速度，观察灯泡与读数。
-
-这是交互教学模型，不是真实设备的性能模拟。
-
-</details>
-
-<details>
-<summary>关于截图与呈现</summary>
-
-画面来自真实线上网站：Kachi、纸上机械馆与流账摄于 2026-10-29，Wayseeker 于 2026-10-31 目录策展与方案生成器上线后重摄；按桌面与手机视口分别取景，局部裁切没有重绘界面。Kachi 展示概念特写，Wayseeker 展示工作路径与工具预览，纸上机械馆展示咖啡机，流账展示工作台。
-
-截图中的进度和示例数据只代表拍摄时状态。公开源码与线上版本可能不同；各项目的许可与第三方权利以对应仓库为准。
+每张版样都只用两种油墨，像一张孔版印刷的打样：蓝色印要留下的，红色印要划掉的。版上的每个词都来自线上产品：Kachi 的 rally / selloff 卡片，和 Wayseeker 的[第 3u1xmp 号处方](https://wayseeker.vercel.app/?plan=3u1xmp)。版样上的英文与产品界面保持一致。截图是 2026-11-01 在 1440 px 和 390 px 宽度下拍摄的线上实拍，没有修图；数字取自各仓库当天的版本。
 
 </details>
 
 ---
 
-<sub>C’est la vie. 保持好奇，继续做点东西。</sub>
+<sub>两种油墨，一台印机。保持好奇。</sub>

@@ -1,111 +1,79 @@
 **English** · [简体中文](README.zh-CN.md)
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/curated-four-20261029/cabinet-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/cabinet-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/curated-four-20261029/cabinet-dark.svg">
-  <img src="assets/curated-four-20261029/cabinet-light.svg" width="1600" alt="cookabc’s cabinet of curiosities: a concept card, a compass, a gear and flow ribbons, representing learning, discovery, play and clarity.">
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/masthead-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/masthead-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/masthead-dark.svg">
+  <img src="assets/proof-20261101/masthead-light.svg" width="1600" alt="cookabc, printed in two inks — blue and red — slightly out of register. Two tools for telling things apart.">
 </picture>
 
-# Useful things, with a playful point of view.
+Hi, I’m **cookabc**. I make small tools that help you tell things apart: a word from its twin, a habit from the tool that replaces it.
 
-I’m **cookabc**. A few selected public projects for learning, finding, playing and making sense of things.
-
-[Learn](#kachi) · [Discover](#wayseeker) · [Play](#museum) · [Visualize](#flow)
+[Kachi](#kachi) · [Wayseeker](#wayseeker)
 
 <a name="kachi"></a>
 
-## 01 / Kachi
+## Kachi
 
-**Financial English, learned through the distinctions that matter.** Concept pairs, short lessons and practice, in English and Chinese.
+**Finance English, taught in pairs.** In a headline, one wrong word flips the story — so every word arrives beside the twin it gets confused with, and every question is decided by the difference.
 
-[Try it live →](https://kachi-game.vercel.app/) · [View code →](https://github.com/cookabc/Kachi)
+**[Play Kachi →](https://kachi-game.vercel.app/)** · [Source](https://github.com/cookabc/Kachi)
 
 <a href="https://kachi-game.vercel.app/">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/kachi-mobile.png">
-    <img src="assets/curated-four-20261029/kachi.png" width="1600" alt="Kachi live-site concept close-up: HEDGE versus PLEDGE, with the distinction between managing risk and pledging collateral.">
-  </picture>
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-proof-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/kachi-proof-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-proof-dark.svg">
+  <img src="assets/proof-20261101/kachi-proof-light.svg" width="1600" alt="Kachi: rally in blue, selloff in red. The trick: a rally is buyers pushing prices up; a selloff is sellers pushing them down. More pairs: slump / rebound, beat / miss, revenue / earnings, coupon / yield, hawkish / dovish, capex / opex, in-sample / out-of-sample, hedge / pledge. 6 levels, 238 concepts, 145 pairs, 125 lessons, 1,697 prompts.">
+</picture>
+</a>
+
+Twin teach cards with art, IPA and recorded audio · eight exercise types, from headlines to spot-the-flaw audits · no hearts, no failing — a miss comes back once as a rehearsal · spaced review per pair · offline PWA, no account, progress stays on your device.
+
+<a href="https://kachi-game.vercel.app/">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-screens-mobile-dark.png">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/kachi-screens-mobile-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-screens-dark.png">
+  <img src="assets/proof-20261101/kachi-screens-light.png" width="1600" alt="Live captures of Kachi: the desktop home with the next pair, rally / selloff, and the twin teach card on a phone.">
+</picture>
 </a>
 
 <a name="wayseeker"></a>
 
-## 02 / Wayseeker
+## Wayseeker
 
-**Find the next useful tool by starting with the work in front of you.** A bilingual field guide to design and development tools, organised into five working paths. When one tool isn't enough, it deals a five-step plan around a single anchor — swap any step, then copy it as Markdown.
+**What are you settling for?** A cabinet of 29 design and code tools, each filed beside the habit it replaces — with an honest caution on the label. Pick one drawer per stage and it writes you a five-line prescription to hand to your agent as Markdown.
 
-[Try it live →](https://wayseeker.vercel.app/) · [View code →](https://github.com/cookabc/wayseeker)
+**[Open the cabinet →](https://wayseeker.vercel.app/)** · [Source](https://github.com/cookabc/wayseeker)
+
+<a href="https://wayseeker.vercel.app/?plan=3u1xmp">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/wayseeker-proof-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/wayseeker-proof-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/wayseeker-proof-dark.svg">
+  <img src="assets/proof-20261101/wayseeker-proof-light.svg" width="1600" alt="Wayseeker prescription No. 3u1xmp: five struck-out habits, each replaced by a tool — Neal.fun, Impeccable, 60fps, Mobbin, Magic Slide.">
+</picture>
+</a>
+
+Five columns follow the work: find a direction → build a visual language → make it move → study the real thing → finish and share. Every label says when to use the tool, what it replaces and what to watch for. Bilingual, in English and 中文.
 
 <a href="https://wayseeker.vercel.app/">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/wayseeker-mobile.png">
-    <img src="assets/curated-four-20261029/wayseeker.png" width="1600" alt="Wayseeker live-site workflow and preview close-up: Find a direction is selected, with a real Rebrand Gallery preview and curator entry points.">
-  </picture>
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/wayseeker-screens-mobile-dark.png">
+  <source media="(max-width: 600px)" srcset="assets/proof-20261101/wayseeker-screens-mobile-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/wayseeker-screens-dark.png">
+  <img src="assets/proof-20261101/wayseeker-screens-light.png" width="1600" alt="Live captures of Wayseeker: the habit field beside the dispensed label for Timing on desktop, and the habit field on a phone.">
+</picture>
 </a>
 
-<a name="museum"></a>
-
-## 03 / Paper Mechanical Museum
-
-**Twelve everyday machines, made into hands-on little exhibits.** Turn, press and explore mechanical ideas on a paper-textured workbench.
-
-[Try it live →](https://paper-mechanical-museum.vercel.app/) · [View code →](https://github.com/cookabc/paper-mechanical-museum)
-
-<a href="https://paper-mechanical-museum.vercel.app/">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/museum-mobile.png">
-    <img src="assets/curated-four-20261029/museum.png" width="1600" alt="Paper Mechanical Museum live homepage close-up: a complete isometric coffee machine on a paper-textured display.">
-  </picture>
-</a>
-
-<sub>Includes foundations and derivative work from Colorfigures / ISO-GLOW / iso-figure. [Sources, credits & licensing](https://github.com/cookabc/paper-mechanical-museum/blob/main/THIRD_PARTY_NOTICES.md).</sub>
-
-<a name="flow"></a>
-
-## 04 / Flow Ledger · 流账
-
-**Turn structured financial data into proportional, checkable flows.** A local-first Sankey workspace with data input, balance checks and SVG / PNG export.
-
-[Try it live →](https://financial-sankey-studio.chuangcius.chatgpt.site/) · [View code →](https://github.com/cookabc/financial-sankey)
-
-<a href="https://financial-sankey-studio.chuangcius.chatgpt.site/">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/curated-four-20261029/flow-mobile.png">
-    <img src="assets/curated-four-20261029/flow.png" width="1600" alt="Flow Ledger live workspace showing its existing sample Sankey chart. Desktop shows input and the complete chart; mobile shows the actual horizontally scrollable viewport, not the full chart. Sample amounts are not independently verified.">
-  </picture>
-</a>
-
-<sub>The mobile chart scrolls horizontally. Sample amounts in the screenshot illustrate the product, not an independent financial verification.</sub>
-
-## A little curiosity break
-
 <details>
-<summary><strong>Collateral, or protection against risk?</strong></summary>
+<summary>About these sheets</summary>
 
-Putting up an asset as collateral: **PLEDGE**. Managing exposure to risk: **HEDGE**.
-
-Similar-looking words do different work. [Keep exploring in Kachi →](https://kachi-game.vercel.app/)
-
-</details>
-
-<details>
-<summary><strong>More hands-on, less instruction manual?</strong></summary>
-
-[Step up to the hand-cranked generator →](https://paper-mechanical-museum.vercel.app/#/generator). Change the cranking speed and watch the bulb and readouts.
-
-It is an interactive teaching model, not a real-device performance simulation.
-
-</details>
-
-<details>
-<summary>About the screenshots & presentation</summary>
-
-Captured from the real, live sites — Kachi, the museum and Flow Ledger on 29 October 2026; Wayseeker on 31 October 2026, after its catalogue curation and plan-generator update. Separate desktop and mobile framing. Close-ups are crops, not redrawn interfaces. Kachi shows a concept close-up; Wayseeker shows the workflow and tool preview; the museum shows its coffee machine; Flow Ledger shows its workspace.
-
-Progress and sample data reflect the captured state only. Public source and deployed versions may differ. Project licences and third-party rights remain with their respective repositories.
+Each sheet is printed in two inks, like a risograph proof: blue for what to keep, red for what to strike. Every word on them comes from the live products — Kachi’s rally / selloff card, and Wayseeker’s [prescription No. 3u1xmp](https://wayseeker.vercel.app/?plan=3u1xmp). The screens are unretouched captures of the live sites, taken on 1 November 2026 at 1440 px and 390 px wide. Counts are from each repository on that date.
 
 </details>
 
 ---
 
-<sub>C’est la vie. Stay curious. Keep making.</sub>
+<sub>Two inks, one press. Stay curious.</sub>
