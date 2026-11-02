@@ -8,6 +8,11 @@ on:
 permissions:
   contents: read
 
+# main 上的每个提交都必须完整跑完，因此只在非 main 分支取消进行中的运行。
+concurrency:
+  group: check-assets-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
 jobs:
   profiles:
     runs-on: ubuntu-latest
@@ -17,6 +22,9 @@ jobs:
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: "3.12"
+      # 注意：README.md / README.zh-CN.md 就是 profile 的产物本身，
+      # check_assets.py 会解析它们。因此这里不做文档路径过滤——
+      # 只改 README 的提交恰恰必须跑这套检查。
       - name: Check published images, bilingual links and SVG timelines
         run: python tools/check_assets.py
       - name: Checker regression tests
