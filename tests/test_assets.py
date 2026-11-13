@@ -65,3 +65,43 @@ class AssetTests(unittest.TestCase):
                 errors, count = check_assets.check()
             self.assertEqual(errors, [])
             self.assertEqual(count, 1)
+
+
+class TypographyContractTests(unittest.TestCase):
+    """DESIGN.md 的字体参数与 render.py 的 Type 实例不许悄悄漂移。"""
+
+    def test_design_typography_matches_renderer(self):
+        import re
+        root = Path(__file__).resolve().parents[1]
+        # 只用标准库解析 DESIGN.md 的 front matter：typography 下是简单的 key: "value"
+        front = (root / "DESIGN.md").read_text(encoding="utf-8").split("---")[1]
+        section = front.split("typography:", 1)[1].split("\n\n", 1)[0]
+        spec = {
+            k.strip(): v.strip().strip('"')
+            for k, v in (line.split(":", 1) for line in section.splitlines() if ":" in line)
+        }
+        # 先守文档本身：四个字体声部必须都在，且参数写全
+        expected_doc = {
+            "display": ("wdth 62", "wght 900"),
+            "pair": ("wdth 78", "wght 800", "opsz 96"),
+            "label": ("wdth 72", "wght 800"),
+            "text": ("wdth 88", "wght 500"),
+        }
+        for key, tokens in expected_doc.items():
+            for token in tokens:
+                self.assertIn(token, spec[key], f"DESIGN.md {key} 缺 {token}")
+
+        # 再守代码：render.py 的 Type 实例化参数与文档逐条对应（纯文本读取，
+        # 不 import，系统 python 无 uharfbuzz / fontTools 也能跑）
+        source = (root / "tools" / "render.py").read_text(encoding="utf-8")
+        expected_code = [
+            ('DISPLAY = Type(FONTS / "archivo-latin.woff2", {"wdth": 62, "wght": 900})'),
+            ('PAIR = Type(FONTS / "bricolage-grotesque-latin.woff2", {"wdth": 78, "wght": 800, "opsz": 96})'),
+            ('LABEL = Type(FONTS / "archivo-latin.woff2", {"wdth": 72, "wght": 800}, tracking=0.02)'),
+            ('TEXT = Type(FONTS / "archivo-latin.woff2", {"wdth": 88, "wght": 500})'),
+        ]
+        for line in expected_code:
+            self.assertIn(line, source, f"render.py 字体参数与 DESIGN.md 漂移: {line}")
+        # 数字统计行必须显式走 tnum（Ark Pixel 无 tnum 时由 has_tnum 守卫跳过）
+        self.assertIn('tnum=True', source)
+        self.assertIn('self.has_tnum', source)

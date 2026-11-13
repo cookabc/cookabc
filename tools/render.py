@@ -88,29 +88,35 @@ class Type:
             self.font.set_variations(variations)
         self.upem = self.face.upem
         self.tracking = tracking
-        cmap = TTFont(io.BytesIO(self.blob)).getBestCmap()
-        self.cmap = cmap
+        font = TTFont(io.BytesIO(self.blob))
+        self.cmap = font.getBestCmap()
+        self.has_tnum = "GSUB" in font and any(
+            r.FeatureTag == "tnum" for r in font["GSUB"].table.FeatureList.FeatureRecord
+        )
 
-    def _shape(self, text):
+    def _shape(self, text, tnum=False):
         missing = [c for c in text if ord(c) not in self.cmap and not c.isspace()]
         if missing:
             raise SystemExit(f"glyphs missing for {missing!r} in {text!r}")
         buf = hb.Buffer()
         buf.add_str(text)
         buf.guess_segment_properties()
-        hb.shape(self.font, buf)
+        # 数字统计行要等宽（tnum）：Archivo / Bricolage 带这个特性。
+        # Ark Pixel 的数字本来就是等宽 600，没有 tnum 也不塌，缺特性时直接跳过。
+        features = {"tnum": True} if tnum and self.has_tnum else None
+        hb.shape(self.font, buf, features)
         return buf.glyph_infos, buf.glyph_positions
 
-    def width(self, text, size):
-        _, pos = self._shape(text)
+    def width(self, text, size, tnum=False):
+        _, pos = self._shape(text, tnum=tnum)
         adv = sum(p.x_advance for p in pos) + self.tracking * self.upem * len(pos)
         return adv * size / self.upem
 
-    def path(self, text, size, x, y, anchor="start"):
+    def path(self, text, size, x, y, anchor="start", tnum=False):
         if anchor != "start":
-            w = self.width(text, size)
+            w = self.width(text, size, tnum=tnum)
             x -= w if anchor == "end" else w / 2
-        infos, pos = self._shape(text)
+        infos, pos = self._shape(text, tnum=tnum)
         scale = size / self.upem
         pen = SVGPathPen(None, ntos=lambda v: f"{v:.1f}".rstrip("0").rstrip("."))
         cursor = 0.0
@@ -366,7 +372,7 @@ def wayseeker(theme, mobile=False):
         s.rule(MARGIN, y, w - MARGIN, y, width=1, extra=' stroke-dasharray="3 6"')
         y += 8
     y += 44
-    s.fill(PIXEL.path("29 HABITS · 29 DRAWERS · 5 COLUMNS", s.slug, MARGIN, y), "ink")
+    s.fill(PIXEL.path("29 HABITS · 29 DRAWERS · 5 COLUMNS", s.slug, MARGIN, y, tnum=True), "ink")
     if mobile:
         s.fill(PIXEL.path("COPY AS MARKDOWN FOR YOUR AGENT", s.slug, MARGIN, y + 36), "ink")
         y += 36
@@ -453,11 +459,11 @@ def kachi(theme, mobile=False):
     s.rule(MARGIN, y, w - MARGIN, y, width=1)
     y += 48
     if mobile:
-        s.fill(PIXEL.path("6 LEVELS · 238 CONCEPTS · 145 PAIRS", s.slug, MARGIN, y), "ink")
-        s.fill(PIXEL.path("125 LESSONS · 1,697 PROMPTS", s.slug, MARGIN, y + 36), "ink")
+        s.fill(PIXEL.path("6 LEVELS · 238 CONCEPTS · 145 PAIRS", s.slug, MARGIN, y, tnum=True), "ink")
+        s.fill(PIXEL.path("125 LESSONS · 1,697 PROMPTS", s.slug, MARGIN, y + 36, tnum=True), "ink")
         y += 36
     else:
-        s.fill(PIXEL.path("6 LEVELS · 238 CONCEPTS · 145 PAIRS · 125 LESSONS · 1,697 PROMPTS", s.slug, MARGIN, y), "ink")
+        s.fill(PIXEL.path("6 LEVELS · 238 CONCEPTS · 145 PAIRS · 125 LESSONS · 1,697 PROMPTS", s.slug, MARGIN, y, tnum=True), "ink")
         s.swatches(w - MARGIN - 196, y - 18)
     s.finish(y + 64)
     write(f"kachi-proof{'-mobile' if mobile else ''}-{theme}.svg", s.svg())
