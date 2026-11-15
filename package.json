@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "capture": "node tools/capture.mjs",
-    "render": "node tools/render.mjs",
+    "render": ".venv/bin/python tools/render.py",
     "check": "python3 tools/check_assets.py && python3 -m unittest discover -s tests"
   },
   "devDependencies": {
