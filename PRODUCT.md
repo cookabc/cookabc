@@ -26,7 +26,7 @@ The personal profile supports light and dark artwork, phone-width variants, and 
 
 ## Brand Commitments
 
-Name: cookabc. Statement: "Two tools for telling things apart." The user asked for a fancy, genuinely redesigned presentation that shows only Kachi and Wayseeker (2026-11-01). Ark Pixel lettering stays as the printer's-annotation voice. One animated moment only. The Studio profile has a separate, cinematic game identity and must not inherit this system.
+Name: cookabc. Statement: "Two tools for telling things apart." The presentation features only Kachi and Wayseeker. Ark Pixel lettering stays as the printer's-annotation voice. One animated moment only. The Studio profile has a separate, cinematic game identity and must not inherit this system.
 
 ## Evidence on Hand
 
