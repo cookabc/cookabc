@@ -36,7 +36,7 @@ profile is printed in exactly two inks, like a risograph proof:
 
 No other colour appears, except inside the unretouched screen captures.
 
-## Sheets
+## Components
 
 Every image is a trimmed sheet with crop marks and a printer's slug across the
 top. The slug names the plate and the sheet (PLATE A · WAYSEEKER, Rx No.
