@@ -10,7 +10,7 @@ phone, light and dark.
 npm install && npx playwright install chromium   # once
 node tools/capture.mjs                            # live sites → .capture/
 python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
-.venv/bin/python tools/render.py                  # .capture/ → assets/proof-20261101/
+npm run render                                   # .capture/ → assets/proof-20261101/
 ```
 
 `render.py` deletes and rewrites the whole artwork folder, so a run always
