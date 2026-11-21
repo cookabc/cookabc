@@ -411,7 +411,7 @@ def kachi(theme, mobile=False):
         "Kachi: the pair rally / selloff set large, rally in blue and selloff in red. "
         f"The trick: {KACHI_TRICK} More pairs from the course: "
         + ", ".join(f"{a} / {b}" for a, b in KACHI_PAIRS)
-        + ". 6 levels, 238 concepts, 145 confusion pairs, 125 lessons, 1,697 prompts."
+        + ". 7 packs, 252 entries (215 distinct meanings), 152 confusion pairs, 137 lessons, 1,803 prompts."
     )
     w = 800 if mobile else 1600
     s = Sheet(w, 0, theme, "Kachi — rally / selloff", desc)
@@ -459,11 +459,11 @@ def kachi(theme, mobile=False):
     s.rule(MARGIN, y, w - MARGIN, y, width=1)
     y += 48
     if mobile:
-        s.fill(PIXEL.path("6 LEVELS · 238 CONCEPTS · 145 PAIRS", s.slug, MARGIN, y, tnum=True), "ink")
-        s.fill(PIXEL.path("125 LESSONS · 1,697 PROMPTS", s.slug, MARGIN, y + 36, tnum=True), "ink")
+        s.fill(PIXEL.path("7 PACKS · 252 ENTRIES · 152 PAIRS", s.slug, MARGIN, y, tnum=True), "ink")
+        s.fill(PIXEL.path("137 LESSONS · 1,803 PROMPTS", s.slug, MARGIN, y + 36, tnum=True), "ink")
         y += 36
     else:
-        s.fill(PIXEL.path("6 LEVELS · 238 CONCEPTS · 145 PAIRS · 125 LESSONS · 1,697 PROMPTS", s.slug, MARGIN, y, tnum=True), "ink")
+        s.fill(PIXEL.path("7 PACKS · 252 ENTRIES · 152 PAIRS · 137 LESSONS · 1,803 PROMPTS", s.slug, MARGIN, y, tnum=True), "ink")
         s.swatches(w - MARGIN - 196, y - 18)
     s.finish(y + 64)
     write(f"kachi-proof{'-mobile' if mobile else ''}-{theme}.svg", s.svg())

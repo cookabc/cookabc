@@ -24,7 +24,7 @@ Hi, I’m **cookabc**. I make small tools that help you tell things apart: a wor
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-proof-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/proof-20261101/kachi-proof-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-proof-dark.svg">
-  <img src="assets/proof-20261101/kachi-proof-light.svg" width="1600" alt="Kachi: rally in blue, selloff in red. The trick: a rally is buyers pushing prices up; a selloff is sellers pushing them down. More pairs: slump / rebound, beat / miss, revenue / earnings, coupon / yield, hawkish / dovish, capex / opex, in-sample / out-of-sample, hedge / pledge. 6 levels, 238 concepts, 145 pairs, 125 lessons, 1,697 prompts.">
+  <img src="assets/proof-20261101/kachi-proof-light.svg" width="1600" alt="Kachi: rally in blue, selloff in red. The trick: a rally is buyers pushing prices up; a selloff is sellers pushing them down. More pairs: slump / rebound, beat / miss, revenue / earnings, coupon / yield, hawkish / dovish, capex / opex, in-sample / out-of-sample, hedge / pledge. 7 packs, 252 entries (215 distinct meanings), 152 confusion pairs, 137 lessons, 1,803 prompts.">
 </picture>
 </a>
 

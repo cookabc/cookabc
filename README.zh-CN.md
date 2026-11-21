@@ -24,7 +24,7 @@
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-proof-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/proof-20261101/kachi-proof-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/proof-20261101/kachi-proof-dark.svg">
-  <img src="assets/proof-20261101/kachi-proof-light.svg" width="1600" alt="Kachi：rally 印蓝色，selloff 印红色。窍门：rally 是买盘把价格推高，selloff 是卖盘把价格砸低。更多词对：slump / rebound、beat / miss、revenue / earnings、coupon / yield、hawkish / dovish、capex / opex、in-sample / out-of-sample、hedge / pledge。6 个等级、238 个概念、145 组词对、125 节课、1697 道题。">
+  <img src="assets/proof-20261101/kachi-proof-light.svg" width="1600" alt="Kachi：rally 印蓝色，selloff 印红色。窍门：rally 是买盘把价格推高，selloff 是卖盘把价格砸低。更多词对：slump / rebound、beat / miss、revenue / earnings、coupon / yield、hawkish / dovish、capex / opex、in-sample / out-of-sample、hedge / pledge。7 个内容包、252 个条目（215 个不同词义）、152 组词对、137 节课、1,803 道题。">
 </picture>
 </a>
 
